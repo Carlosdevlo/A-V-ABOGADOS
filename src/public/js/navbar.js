@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toggle.addEventListener('click', function() {
       const isOpen = menu.classList.contains('navbar__menu--open');
       menu.classList.toggle('navbar__menu--open');
+      toggle.classList.toggle('navbar__toggle--open');
       toggle.setAttribute('aria-expanded', !isOpen);
       document.body.style.overflow = isOpen ? '' : 'hidden';
     });
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', function() {
         if (menu.classList.contains('navbar__menu--open')) {
           menu.classList.remove('navbar__menu--open');
+          toggle.classList.remove('navbar__toggle--open');
           toggle.setAttribute('aria-expanded', 'false');
           document.body.style.overflow = '';
         }
