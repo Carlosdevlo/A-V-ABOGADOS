@@ -92,6 +92,12 @@ ul, ol {
   }
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding-block: 70px;
+  }
+}
+
 .section--dark {
   background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-alt) 100%);
   color: var(--color-text-light);

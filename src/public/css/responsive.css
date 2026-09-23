@@ -1,3 +1,6 @@
+/* Mobile-first responsive styles */
+
+/* Very small screens (under 381px) */
 @media (max-width: 380px) {
   .container {
     padding-inline: 16px;
@@ -42,6 +45,7 @@
 
   .results-cta__grid {
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   .results__grid {
@@ -51,11 +55,48 @@
   .stats__grid {
     grid-template-columns: 1fr;
   }
+
+  /* Smaller hero text */
+  .hero__title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero__text {
+    font-size: 0.95rem;
+  }
+
+  /* Smaller section titles */
+  .section__title {
+    font-size: 1.4rem;
+  }
+
+  /* Smaller buttons */
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
+/* Small mobile (381px - 767px) */
 @media (min-width: 381px) and (max-width: 767px) {
+  .hero {
+    min-height: 80vh;
+    height: auto;
+  }
+
+  .hero__content {
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+  }
+
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.2;
   }
 
   .hero__subtitle {
@@ -70,13 +111,32 @@
     max-width: none;
   }
 
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .stats__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.75rem 1rem;
+  }
+
+  .stat-card__number {
+    font-size: 1.75rem;
   }
 
   .about__grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .about__image {
+    max-width: 600px;
+    margin-inline: auto;
   }
 
   .steps {
@@ -90,6 +150,8 @@
 
   .step__number {
     font-size: 1.75rem;
+    width: 50px;
+    height: 50px;
   }
 
   .step__content {
@@ -101,12 +163,65 @@
     grid-template-columns: 1fr;
   }
 
+  .results-cta__title {
+    font-size: 1.5rem;
+  }
+
+  .results__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .legal-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-claimation__grid,
+  .client-type__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .client-type-card {
+    padding: 1.75rem;
+  }
+
+  /* Smaller section titles */
+  .section__title {
+    font-size: 1.6rem;
+  }
+
+  /* Contact grid on mobile */
   .contact__grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .contact__form .form__input,
+  .contact__form .form__select,
+  .contact__form .form__textarea {
+    padding: 0.75rem 1rem;
+  }
+
+  /* FAQ on mobile */
+  .faq__list {
+    border-radius: var(--border-radius-lg);
+  }
+
+  .faq__question {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .faq__answer {
+    padding: 0 1.25rem 1.25rem;
+  }
 }
 
+/* Tablet (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .container {
     padding-inline: 32px;
@@ -115,6 +230,10 @@
   .hero__content {
     max-width: 640px;
     margin-inline: auto;
+  }
+
+  .hero__title {
+    font-size: 2.25rem;
   }
 
   .hero__cta {
@@ -131,8 +250,21 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .stat-card__number {
+    font-size: 2.5rem;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
   .results-cta__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .results__grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .legal-services__grid {
@@ -143,8 +275,14 @@
   .client-type__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
 }
 
+/* Medium desktop (1025px - 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .hero__content {
     max-width: 640px;
@@ -156,6 +294,7 @@
   }
 }
 
+/* Large desktop (1441px+) */
 @media (min-width: 1441px) {
   .stats__grid {
     grid-template-columns: repeat(4, 1fr);
@@ -174,6 +313,7 @@
   }
 }
 
+/* Accessibility: reduce motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
