@@ -1,0 +1,24 @@
+<section class="legal-services section section--dark" id="servicios-juridicos">
+  <div class="container">
+    <div class="section__header section__header--light" data-aos="fade-up">
+      <h2 class="section__title">Lo acompañamos durante todo el proceso</h2>
+      <p class="section__subtitle">
+        Nuestra experiencia cubre desde la reclamación inicial hasta la representación completa.
+      </p>
+    </div>
+
+    <div class="legal-services__grid">
+      <% legalServices.forEach((service, index) => { %>
+        <div class="legal-service-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="legal-service-card__number"><%= service.id %></div>
+          <h3 class="legal-service-card__title"><%= service.title %></h3>
+          <p class="legal-service-card__text"><%= service.description %></p>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="section__cta" data-aos="fade-up" data-aos-delay="400">
+      <a href="#contacto" class="btn btn--secondary btn--lg">Quiero saber si mi caso aplica</a>
+    </div>
+  </div>
+</section>

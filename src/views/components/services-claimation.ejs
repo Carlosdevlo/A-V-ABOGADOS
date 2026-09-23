@@ -1,0 +1,22 @@
+<section class="services-claimation section" id="servicios">
+  <div class="container">
+    <div class="section__header" data-aos="fade-up">
+      <h2 class="section__title">¿Qué podemos reclamar por usted?</h2>
+      <p class="section__subtitle">
+        Exigimos para nuestro clientes una justa indemnización en base a la jurisprudencia aplicable.
+      </p>
+    </div>
+
+    <div class="services-claimation__grid">
+      <% services.forEach((service, index) => { %>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="service-card__icon">
+            <i data-lucide="<%= service.icon %>" aria-hidden="true"></i>
+          </div>
+          <h3 class="service-card__title"><%= service.title %></h3>
+          <p class="service-card__text"><%= service.description %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

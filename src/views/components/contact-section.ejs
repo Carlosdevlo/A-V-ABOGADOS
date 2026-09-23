@@ -1,0 +1,99 @@
+<section class="contact-section section" id="contacto">
+  <div class="container">
+    <div class="contact__grid">
+      <div class="contact__info" data-aos="fade-right">
+        <h2 class="contact__title">Cuéntenos qué ocurrió</h2>
+        <p class="contact__subtitle">
+          Un integrante de nuestro equipo puede revisar inicialmente su situación.
+        </p>
+        <div class="contact__details">
+          <div class="contact__detail">
+            <i data-lucide="map-pin" class="contact__detail-icon" aria-hidden="true"></i>
+            <address>
+              Av Calle 26 # 69 – 76<br>
+              Edificio Elemento, Torre 3 Tierra, Oficina 1501
+            </address>
+          </div>
+          <div class="contact__detail">
+            <i data-lucide="phone" class="contact__detail-icon" aria-hidden="true"></i>
+            <p>(+57) 484 9186</p>
+          </div>
+          <div class="contact__detail">
+            <i data-lucide="smartphone" class="contact__detail-icon" aria-hidden="true"></i>
+            <p>300 881 1886</p>
+          </div>
+          <div class="contact__detail">
+            <i data-lucide="mail" class="contact__detail-icon" aria-hidden="true"></i>
+            <p>contacto@abogadosav.com</p>
+          </div>
+          <div class="contact__detail">
+            <i data-lucide="globe" class="contact__detail-icon" aria-hidden="true"></i>
+            <p>www.abogadosav.com</p>
+          </div>
+        </div>
+        <a href="<%= whatsappLink %>" class="btn btn--outline btn--lg" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="whatsapp" class="btn__icon" aria-hidden="true"></i> Hablar por WhatsApp
+        </a>
+      </div>
+
+      <form class="contact__form" id="contact-form" novalidate>
+        <div class="form__group">
+          <label for="name" class="form__label">Nombre completo *</label>
+          <input type="text" id="name" name="name" class="form__input" required maxlength="100">
+          <span class="form__error" id="name-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="phone" class="form__label">Teléfono / WhatsApp *</label>
+          <input type="tel" id="phone" name="phone" class="form__input" required maxlength="20">
+          <span class="form__error" id="phone-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="email" class="form__label">Correo electrónico *</label>
+          <input type="email" id="email" name="email" class="form__input" required maxlength="100">
+          <span class="form__error" id="email-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="caseType" class="form__label">Tipo de caso *</label>
+          <select id="caseType" name="caseType" class="form__select" required>
+            <option value="">Seleccione una opción</option>
+            <option value="accidente-transito">Accidente de tránsito</option>
+            <option value="reclamacion-seguro">Reclamación de seguro</option>
+            <option value="fiscalia">Representación en Fiscalía</option>
+            <option value="pcl">Pérdida de capacidad laboral</option>
+            <option value="otro">Otro</option>
+          </select>
+          <span class="form__error" id="caseType-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="city" class="form__label">Ciudad *</label>
+          <input type="text" id="city" name="city" class="form__input" required maxlength="60">
+          <span class="form__error" id="city-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="message" class="form__label">Descripción breve del caso *</label>
+          <textarea id="message" name="message" class="form__textarea" rows="4" required minlength="10" maxlength="1000"></textarea>
+          <span class="form__error" id="message-error"></span>
+        </div>
+
+        <div class="form__group form__group--checkbox">
+          <label class="form__checkbox-label">
+            <input type="checkbox" name="privacy" value="on" class="form__checkbox" required>
+            <span class="form__checkmark"></span>
+            He leído y acepto la política de tratamiento de datos personales. *
+          </label>
+          <span class="form__error" id="privacy-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--full" id="submit-btn">
+          <span id="submit-text">Solicitar valoración</span>
+          <i data-lucide="send" class="btn__icon" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

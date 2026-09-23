@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /contact/submit
+Disallow: /api/
+Allow: /
+
+Sitemap: https://www.abogadosav.com/sitemap.xml

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A&V Abogados | Accidentes de Tránsito, Seguros e Indemnizaciones</title>
+  <meta name="description" content="Abogados especializados en accidentes de tránsito, seguros y responsabilidad civil en Colombia. Defendemos sus derechos y buscamos una indemnización justa. Asesoría sin costo.">
+  <meta name="theme-color" content="#008037">
+  <meta name="color-scheme" content="light">
+
+  <meta property="og:title" content="A&V Abogados | Accidentes de Tránsito, Seguros e Indemnizaciones">
+  <meta property="og:description" content="Abogados especializados en accidentes de tránsito, seguros y responsabilidad civil en Colombia. Defendemos sus derechos y buscamos una indemnización justa.">
+  <meta property="og:image" content="/images/hero/og-image-home.webp">
+  <meta property="og:url" content="https://www.abogadosav.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A&V Abogados | Accidentes de Tránsito, Seguros e Indemnizaciones">
+  <meta name="twitter:description" content="Abogados especializados en accidentes de tránsito, seguros y responsabilidad civil en Colombia.">
+
+  <link rel="canonical" href="https://www.abogadosav.com">
+  <link rel="icon" href="/images/logo/favicon.avif" type="image/avif" sizes="32x32">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/hero.css">
+  <link rel="stylesheet" href="/css/sections.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+
+  <script defer src="https://unpkg.com/lucide@0.450.0/dist/lucide.min.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "A&V Abogados",
+    "alternateName": "A&V Abogados - Profesionales en Seguros y Responsabilidad Civil",
+    "url": "https://www.abogadosav.com",
+    "description": "Profesionales en Seguros y Responsabilidad Civil. Representación jurídica para víctimas de accidentes de tránsito en Colombia.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av Calle 26 # 69 – 76, Edificio Elemento, Torre 3 Tierra, Oficina 1501",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Cundinamarca",
+      "addressCountry": "CO"
+    },
+    "telephone": "+57 484 9186",
+    " priceRange": "$$",
+    "areaServed": "CO",
+    "serviceType": "Accidentes de tránsito, Seguros, Responsabilidad Civil"
+  }
+  </script>
+</head>
+<body class="home">
+  <%- include('partials/whatsapp-button') %>
+  <%- include('partials/navbar') %>
+
+  <main>
+    <%- include('components/hero-section') %>
+    <%- include('components/stats-section') %>
+    <%- include('components/about-section') %>
+    <%- include('components/services-claimation') %>
+    <%- include('components/legal-services') %>
+    <%- include('components/how-it-works') %>
+    <%- include('components/results-section') %>
+    <%- include('components/companies-section') %>
+    <%- include('components/client-identification') %>
+    <%- include('components/faq-section') %>
+    <%- include('components/contact-section') %>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/animations.js" defer></script>
+  <script src="/js/contact.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script>
+    window.__WHATSAPP_LINK__ = "<%= whatsappLink %>";
+  </script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

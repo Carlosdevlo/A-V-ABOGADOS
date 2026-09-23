@@ -1,0 +1,25 @@
+<section class="client-identification section" id="podemos-ayudarle">
+  <div class="container">
+    <div class="section__header" data-aos="fade-up">
+      <h2 class="section__title">¿Podemos ayudarle?</h2>
+      <p class="section__subtitle">
+        Si alguna de estas situaciones le resulta familiar, estamos aquí para ayudarle.
+      </p>
+    </div>
+
+    <div class="client-type__grid">
+      <% clientTypes.forEach((type, index) => { %>
+        <div class="client-type-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="client-type-card__icon">
+            <i data-lucide="<%= type.icon %>" aria-hidden="true"></i>
+          </div>
+          <h3 class="client-type-card__title"><%= type.title %></h3>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="section__cta" data-aos="fade-up" data-aos-delay="600">
+      <a href="#contacto" class="btn btn--primary btn--lg">Consultar mi caso</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="Error del servidor - A&V Abogados">
+  <meta name="theme-color" content="#008037">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script defer src="https://unpkg.com/lucide@0.450.0/dist/lucide.min.js"></script>
+</head>
+<body class="error-page">
+  <header class="error-header">
+    <div class="container">
+      <a href="/" class="error-logo">
+        <img src="/images/logo/logo.avif" alt="A&V Abogados" loading="lazy" width="160" height="54">
+      </a>
+    </div>
+  </header>
+  <main class="container error-container">
+    <div class="error-content">
+      <h1 class="error-title" data-error="500">500</h1>
+      <p class="error-text">Error del servidor</p>
+      <p class="error-subtext">Ocurrió un error inesperado. Por favor, intente nuevamente.</p>
+      <a href="/" class="btn btn--primary">Volver al inicio</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__copyright">© A&V Abogados <%= new Date().getFullYear() %></p>
+      <p class="footer__disclaimer">
+        La información publicada en este sitio tiene fines informativos y no constituye asesoría
+        jurídica individual.
+      </p>
+    </div>
+  </footer>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+@media (max-width: 380px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  .hero__content {
+    padding: 1.5rem;
+  }
+
+  .hero__badge {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__cta {
+    margin-bottom: 2rem;
+  }
+
+  .hero__trust {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero__trust-item {
+    flex: 1 1 auto;
+    font-size: 0.8rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .section {
+    padding-block: 50px;
+  }
+
+  .services-claimation__grid,
+  .services-claiment__grid,
+  .legal-services__grid,
+  .client-type__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-cta__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .results__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 767px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .hero__text {
+    font-size: 1rem;
+  }
+
+  .hero__cta .btn {
+    max-width: none;
+  }
+
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .steps {
+    gap: 1rem;
+  }
+
+  .step {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .step__number {
+    font-size: 1.75rem;
+  }
+
+  .step__content {
+    border-left: 2px solid var(--color-border);
+    padding-left: 1rem;
+  }
+
+  .results-cta__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-inline: 32px;
+  }
+
+  .hero__content {
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero__cta .btn {
+    max-width: 280px;
+  }
+
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .results-cta__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .legal-services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-claimation__grid,
+  .client-type__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero__content {
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  .results-cta__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1441px) {
+  .stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .legal-services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .services-claimation__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .client-type__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

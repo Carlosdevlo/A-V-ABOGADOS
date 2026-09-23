@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="theme-color" content="#008037">
+  <meta name="color-scheme" content="light">
+
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= description %>">
+  <meta property="og:image" content="<%= title.includes('Contacto') ? '/images/hero/og-image-contact.webp' : '/images/hero/og-image-home.webp' %>">
+  <meta property="og:url" content="<%= description.includes('contacto') ? 'https://www.abogadosav.com/contacto' : 'https://www.abogadosav.com' %>">
+  <meta property="og:type" content="<%= title.includes('Contacto') ? 'website' : 'website' %>">
+  <meta property="og:locale" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= title %>">
+  <meta name="twitter:description" content="<%= description %>">
+
+  <link rel="canonical" href="<%= description.includes('contacto') ? 'https://www.abogadosav.com/contacto' : 'https://www.abogadosav.com' %>">
+  <link rel="icon" href="/images/logo/favicon.avif" type="image/avif" sizes="32x32">
+  <link rel="icon" href="/images/logo/favicon.avif" type="image/avif" sizes="16x16">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/hero.css">
+  <link rel="stylesheet" href="/css/sections.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+
+  <script defer src="https://unpkg.com/lucide@0.450.0/dist/lucide.min.js"></script>
+</head>
+<body class="js <%= page || 'home' %>">
+  <%- include('partials/whatsapp-button') %>
+  <%- include('partials/navbar') %>
+  <main>
+    <%- body %>
+  </main>
+  <%- include('partials/footer') %>
+
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/animations.js" defer></script>
+  <script src="/js/contact.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script>
+    window.__WHATSAPP_LINK__ = <%= JSON.stringify(whatsappLink || '') %>;
+  </script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
