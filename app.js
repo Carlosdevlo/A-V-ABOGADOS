@@ -30,9 +30,9 @@ function createApp() {
       directives: {
         defaultSrc: ["'self'"],
         styleSrc: ["'self'", "'unsafe-inline'"],
-        scriptSrc: ["'self'", "'unsafe-inline'", "https://unpkg.com"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "https://unpkg.com", "https://va.vercel-scripts.com"],
         imgSrc: ["'self'", "data:", "https:"],
-        connectSrc: ["'self'"],
+        connectSrc: ["'self'", "https://vitals.vercel-insights.com"],
         fontSrc: ["'self'", "https:", "data:"],
         objectSrc: ["'none'"],
         mediaSrc: ["'self'"],

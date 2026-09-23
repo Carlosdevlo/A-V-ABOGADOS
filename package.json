@@ -18,12 +18,13 @@
   "author": "A&V Abogados",
   "license": "UNLICENSED",
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.9",
     "express": "^4.19.2",
     "express-rate-limit": "^7.3.0",
-    "helmet": "^8.0.0",
-    "express-validator": "^7.0.1"
+    "express-validator": "^7.0.1",
+    "helmet": "^8.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
