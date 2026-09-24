@@ -1,0 +1,91 @@
+<section class="cta-final section section--cta" id="contacto">
+  <div class="container">
+    <div class="cta-final__layout">
+      <div class="cta-final__content" data-aos="fade-right">
+        <div class="section__badge">
+          <span class="section__badge-dot"></span>
+          <span class="section__badge-text">Contacto</span>
+        </div>
+        <h2 class="cta-final__title">¿Tiene un caso y no sabe por dónde empezar?</h2>
+        <p class="cta-final__subtitle">
+          Cuéntenos qué ocurrió. Un integrante de nuestro equipo puede revisar
+          inicialmente su situación sin costo alguno.
+        </p>
+        <div class="cta-final__buttons">
+          <a href="#contacto" class="btn btn--primary btn--xl">Evaluar mi caso</a>
+          <a href="<%= whatsappLink %>" class="btn btn--whatsapp btn--xl" target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp">
+            <i data-lucide="whatsapp" class="btn__icon" aria-hidden="true"></i> Hablar por WhatsApp
+          </a>
+        </div>
+        <div class="cta-final__note">
+          <i data-lucide="clock" class="cta-final__note-icon" aria-hidden="true"></i>
+          <span>Horario: Lunes a viernes, 8:00 a 18:00</span>
+        </div>
+      </div>
+
+      <div class="cta-final__form-wrapper" data-aos="fade-left">
+        <div class="contact-form">
+          <h3 class="contact-form__title">Cuéntenos qué ocurrió</h3>
+          <form class="contact__form" id="contact-form" novalidate>
+            <div class="form__group">
+              <label for="name" class="form__label">Nombre completo *</label>
+              <input type="text" id="name" name="name" class="form__input" required maxlength="100">
+              <span class="form__error" id="name-error"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="phone" class="form__label">Teléfono / WhatsApp *</label>
+              <input type="tel" id="phone" name="phone" class="form__input" required maxlength="20">
+              <span class="form__error" id="phone-error"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label">Correo electrónico *</label>
+              <input type="email" id="email" name="email" class="form__input" required maxlength="100">
+              <span class="form__error" id="email-error"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="caseType" class="form__label">Tipo de caso *</label>
+              <select id="caseType" name="caseType" class="form__select" required>
+                <option value="">Seleccione una opción</option>
+                <option value="accidente-transito">Accidente de tránsito</option>
+                <option value="reclamacion-seguro">Reclamación de seguro</option>
+                <option value="fiscalia">Representación en Fiscalía</option>
+                <option value="pcl">Pérdida de capacidad laboral</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="form__error" id="caseType-error"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="city" class="form__label">Ciudad *</label>
+              <input type="text" id="city" name="city" class="form__input" required maxlength="60">
+              <span class="form__error" id="city-error"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="message" class="form__label">Descripción breve del caso *</label>
+              <textarea id="message" name="message" class="form__textarea" rows="4" required minlength="10" maxlength="1000"></textarea>
+              <span class="form__error" id="message-error"></span>
+            </div>
+
+            <div class="form__group form__group--checkbox">
+              <label class="form__checkbox-label">
+                <input type="checkbox" name="privacy" value="on" class="form__checkbox" required>
+                <span class="form__checkmark"></span>
+                He leído y acepto la política de tratamiento de datos personales. *
+              </label>
+              <span class="form__error" id="privacy-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg btn--full" id="submit-btn">
+              <span id="submit-text">Solicitar valoración</span>
+              <i data-lucide="send" class="btn__icon" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

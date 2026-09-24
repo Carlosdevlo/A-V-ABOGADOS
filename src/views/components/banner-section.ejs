@@ -1,9 +1,12 @@
 <section class="banner" id="banner-accidente">
   <div class="banner__media">
-    <video class="banner__video" autoplay loop muted playsinline preload="metadata" poster="/images/banners/av-banner-accidente.png" aria-hidden="true">
-      <source src="/images/banners/13712185_1920_1080_24fps.mp4" type="video/mp4">
-    </video>
-    <div class="banner__overlay"></div>
+    <div class="banner__video-wrapper" aria-hidden="true">
+      <img src="/images/banners/av-banner-accidente.png" alt="" class="banner__poster" loading="lazy" width="1920" height="1080">
+      <video class="banner__video" autoplay loop muted playsinline preload="metadata" data-src="/images/banners/13712185_1920_1080_24fps.mp4" data-poster="/images/banners/av-banner-accidente.png" aria-hidden="true">
+        <source data-src="/images/banners/13712185_1920_1080_24fps.mp4" type="video/mp4">
+      </video>
+      <div class="banner__overlay"></div>
+    </div>
   </div>
   <div class="container banner__content" data-aos="fade-up">
     <h2 class="banner__title">¿Fue víctima de un accidente de tránsito?</h2>

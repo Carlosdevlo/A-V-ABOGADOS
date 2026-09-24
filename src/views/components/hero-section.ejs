@@ -1,5 +1,11 @@
-<section class="hero" id="inicio">
-  <div class="hero--split container">
+<section class="hero section" id="inicio">
+  <div class="hero__visual-container" aria-hidden="true">
+    <div class="hero__visual-float hero__visual-float--1"></div>
+    <div class="hero__visual-float hero__visual-float--2"></div>
+    <div class="hero__visual-float hero__visual-float--3"></div>
+  </div>
+
+  <div class="container hero--split">
     <div class="hero__content" data-aos="fade-up">
       <div class="hero__badge" data-aos="fade-down">
         <span class="hero__badge-text">A&V ABOGADOS</span>
@@ -20,7 +26,7 @@
 
       <div class="hero__cta" data-aos="fade-up" data-aos-delay="400">
         <a href="#contacto" class="btn btn--primary btn--lg">Evaluar mi caso gratis</a>
-        <a href="<%= whatsappLink %>" class="btn btn--outline btn--lg" target="_blank" rel="noopener noreferrer">
+        <a href="<%= whatsappLink %>" class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp">
           <i data-lucide="whatsapp" class="btn__icon" aria-hidden="true"></i> Hablar por WhatsApp
         </a>
       </div>
@@ -42,11 +48,16 @@
     </div>
 
     <div class="hero__visual" data-aos="fade-left">
-      <div class="hero__visual-placeholder">
-        <div class="hero__visual-icon">
-          <i data-lucide="gavel" class="hero__visual-icon-img" aria-hidden="true"></i>
+      <div class="hero__visual-media">
+        <img src="/images/sections/hero-professional.jpg" alt="Abogados profesionales asesorando a cliente - A&V Abogados" class="hero__visual-img" loading="eager" width="600" height="700">
+        <div class="hero__visual-overlay"></div>
+        <div class="hero__visual-badge">
+          <i data-lucide="award" class="hero__visual-badge-icon" aria-hidden="true"></i>
+          <span>ACOMPAÑAMIENTO INTEGRAL</span>
         </div>
-        <span class="hero__visual-text">Acompañamiento integral</span>
+        <div class="hero__visual-subtext">
+          <span class="hero__visual-subtext-main">Jurídico · Humano · Profesional</span>
+        </div>
       </div>
     </div>
   </div>

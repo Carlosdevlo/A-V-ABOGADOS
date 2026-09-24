@@ -6,10 +6,12 @@
   border-bottom: 1px solid var(--color-border-light);
   transition: var(--transition-base);
   box-shadow: var(--shadow-xs);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar--scrolled {
-  background: var(--color-light);
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow-sm);
   border-bottom-color: var(--color-border);
 }
@@ -32,6 +34,11 @@
 
 .navbar__logo {
   display: block;
+  transition: opacity var(--transition-base);
+}
+
+.navbar__logo:hover {
+  opacity: 0.85;
 }
 
 .navbar__logo-img {
@@ -60,7 +67,8 @@
   font-size: 0.95rem;
   transition: var(--transition-fast);
   position: relative;
-  padding: 8px 0;
+  padding: 10px 0;
+  letter-spacing: -0.01em;
 }
 
 .navbar__link:hover,
@@ -93,35 +101,48 @@
 }
 
 .navbar__item--cta .btn {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: var(--gradient-primary);
   color: var(--color-text-light);
   border-color: var(--color-primary);
-  box-shadow: 0 4px 16px rgba(0, 102, 45, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 102, 45, 0.25);
   padding: 0.875rem 2rem;
   font-weight: var(--font-weight-semibold);
   font-size: 0.95rem;
   border-radius: var(--border-radius-lg);
   transition: var(--transition-base);
+  position: relative;
+  z-index: 0;
+}
+
+.navbar__item--cta .btn::before {
+  opacity: 0;
 }
 
 .navbar__item--cta .btn:hover {
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  background: var(--gradient-primary-hover);
   border-color: var(--color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 102, 45, 0.4);
+  box-shadow: 0 8px 28px rgba(0, 102, 45, 0.35);
 }
 
 .navbar__toggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 32px;
-  height: 24px;
+  width: 36px;
+  height: 28px;
   background: none;
   cursor: pointer;
   padding: 0;
   z-index: 1001;
   transition: var(--transition-base);
+  border: none;
+}
+
+.navbar__toggle:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 .navbar__toggle-bar {
@@ -156,6 +177,26 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
+/* Mobile overlay */
+.navbar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 998;
+}
+
+.navbar__overlay--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Styles */
 @media (max-width: 767px) {
   .navbar__toggle {
     display: flex;
@@ -166,27 +207,43 @@
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 70%;
+    width: 85%;
     max-width: 320px;
     flex-direction: column;
     background: var(--color-light);
     border-left: 1px solid var(--color-border-light);
     box-shadow: var(--shadow-xl);
-    gap: 1.5rem;
-    padding: 5rem 2rem 2rem;
-    transition: right 0.3s ease;
+    gap: 0;
+    padding: 5rem 1.5rem 2.5rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
-    z-index: 999;
+    z-index: 1000;
   }
 
   .navbar__menu--open {
     right: 0;
   }
 
+  .navbar__item {
+    margin-bottom: 1rem;
+  }
+
+  .navbar__item:last-child {
+    margin-bottom: 0;
+  }
+
   .navbar__link {
     color: var(--color-text);
     font-size: 1.1rem;
-    padding: 10px 0;
+    padding: 12px 0;
+    display: block;
+    position: relative;
+  }
+
+  .navbar__link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 
   .navbar__link--highlight::after {
@@ -194,10 +251,19 @@
   }
 
   .navbar__item--cta {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border-light);
   }
 
   .navbar__item--cta .btn {
     width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .navbar__item--cta .btn:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
   }
 }

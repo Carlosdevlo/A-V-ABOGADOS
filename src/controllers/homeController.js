@@ -30,12 +30,12 @@ const homeController = {
         { number: '04', title: 'Lo acompañamos durante el proceso', description: 'Trabajamos hasta obtener una indemnización justa y completa.' }
       ],
       clientTypes: [
-        { id: 'lesiones', icon: 'crutch', title: 'Sufrió lesiones en un accidente' },
-        { id: 'familiar', icon: 'users', title: 'Un familiar fue víctima de un accidente' },
-        { id: 'aseguradora', icon: 'shield', title: 'Tiene problemas con una aseguradora' },
-        { id: 'materiales', icon: 'home', title: 'Tiene daños materiales' },
-        { id: 'fiscalia', icon: 'gavel', title: 'Está en proceso ante Fiscalía' },
-        { id: 'pcl', icon: 'activity', title: 'Necesita evaluar pérdida de capacidad laboral' }
+        { id: 'lesiones', icon: 'crutch', title: 'Sufrió lesiones en un accidente', description: 'Lesiones físicas o psicológicas causadas por negligencia en un accidente de tránsito. Le acompañamos en la gestión de gastos médicos y daños.' },
+        { id: 'familiar', icon: 'users', title: 'Un familiar fue víctima de un accidente', description: 'Homicidio culposo o lesiones graves de un ser querido. Representación integral para familias en duelo y trámites de seguros.' },
+        { id: 'aseguradora', icon: 'shield', title: 'Tiene problemas con una aseguradora', description: 'Su reclamación fue rechazada o subestimada. Exigimos el reconocimiento justo de sus derechos frente a cualquier compañía.' },
+        { id: 'materiales', icon: 'home', title: 'Tiene daños materiales', description: 'Daños a su vehículo, propiedad o bienes personales. Gestionamos la indemnización por daños materiales y lucro cesante.' },
+        { id: 'fiscalia', icon: 'gavel', title: 'Está en proceso ante Fiscalía', description: 'Representación jurídica integral ante la Fiscalía por accidentes de tránsito, homicidios culposos y responsabilidad penal.' },
+        { id: 'pcl', icon: 'activity', title: 'Necesita evaluar pérdida de capacidad laboral', description: 'Pérdida parcial o total de capacidad laboral. Evaluamos su caso y gestionamos el reconocimiento correspondiente con apoyo médico.' }
       ],
       faqs: [
         { question: '¿La asesoría tiene costo?', answer: 'No. La asesoría inicial es completamente sin costo. No paga nada hasta que se logre una indemnización.' },

@@ -1,20 +1,34 @@
-<section class="how-it-works section" id="como-funciona">
+<section class="timeline-section section" id="como-funciona">
   <div class="container">
     <div class="section__header" data-aos="fade-up">
+      <div class="section__badge">
+        <span class="section__badge-dot"></span>
+        <span class="section__badge-text">Nuestro proceso</span>
+      </div>
       <h2 class="section__title">Cómo trabajamos</h2>
-      <p class="section__subtitle">Un proceso sencillo y claro, pensado para usted.</p>
+      <p class="section__subtitle">
+        Un proceso sencillo y claro, pensado para usted.
+      </p>
     </div>
 
-    <div class="steps">
+    <div class="timeline" data-aos="fade-up" data-aos-delay="100">
+      <div class="timeline__rail"></div>
       <% steps.forEach((step, index) => { %>
-        <div class="step" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
-          <div class="step__number"><%= step.number %></div>
-          <div class="step__content">
-            <h3 class="step__title"><%= step.title %></h3>
-            <p class="step__text"><%= step.description %></p>
+        <div class="timeline__item">
+          <div class="timeline__marker">
+            <span class="timeline__number"><%= step.number %></span>
+            <div class="timeline__dot"></div>
+          </div>
+          <div class="timeline__content">
+            <h3 class="timeline__title"><%= step.title %></h3>
+            <p class="timeline__text"><%= step.description %></p>
           </div>
         </div>
       <% }) %>
+    </div>
+
+    <div class="timeline__cta" data-aos="fade-up" data-aos-delay="400">
+      <a href="#contacto" class="btn btn--primary btn--lg">Quiero saber si mi caso aplica</a>
     </div>
   </div>
 </section>

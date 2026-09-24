@@ -1,6 +1,10 @@
-<section class="client-identification section" id="podemos-ayudarle">
+<section class="client-identification section section--alt" id="podemos-ayudarle">
   <div class="container">
     <div class="section__header" data-aos="fade-up">
+      <div class="section__badge">
+        <span class="section__badge-dot"></span>
+        <span class="section__badge-text">Situaciones en las que podemos ayudarle</span>
+      </div>
       <h2 class="section__title">¿Podemos ayudarle?</h2>
       <p class="section__subtitle">
         Si alguna de estas situaciones le resulta familiar, estamos aquí para ayudarle.
@@ -14,6 +18,7 @@
             <i data-lucide="<%= type.icon %>" aria-hidden="true"></i>
           </div>
           <h3 class="client-type-card__title"><%= type.title %></h3>
+          <p class="client-type-card__text"><%= type.description %></p>
         </div>
       <% }) %>
     </div>
