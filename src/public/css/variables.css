@@ -1,33 +1,39 @@
 :root {
+  /* Corporate green palette */
   --color-primary: #00662d;
   --color-primary-dark: #004d21;
-  --color-primary-light: #007a2f;
-  --color-secondary: #1a1a1a;
-  --color-secondary-light: #3a3a3a;
-  --color-accent: #ffd000;
-  --color-accent-hover: #e6b800;
-  --color-accent-dark: #e6c200;
-  --color-accent-text: #1a1a1a;
+  --color-primary-light: #008037;
 
+  /* Secondary green shades */
+  --color-green-medium: #007a2f;
+  --color-green-light: #009944;
+
+  /* Greys */
+  --color-secondary: #1a1a1a;
   --color-dark: #1a1a1a;
   --color-dark-alt: #0d0d0d;
   --color-text: #292929;
   --color-text-secondary: #5a6268;
+  --color-text-muted: #8a8d91;
   --color-text-light: #ffffff;
 
+  /* Light backgrounds */
   --color-light: #ffffff;
-  --color-light-alt: #f0f5f2;
-  --color-light-bg: #f8fafc;
+  --color-light-alt: #f8fafc;
+  --color-light-bg: #f0f5f2;
 
+  /* Borders */
   --color-border: #e0e0e0;
   --color-border-light: #f1f1f1;
 
-  --color-muted: #8a8d91;
+  /* Status colors */
   --color-success: #00662d;
   --color-error: #dc3545;
 
+  /* Fonts */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typography scale */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -38,22 +44,48 @@
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
 
+  /* Line heights */
+  --line-height-tight: 1.15;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.7;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Max widths */
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+
+  /* Container gaps */
+  --container-padding: 48px;
+  --container-padding-desktop: 48px;
+  --section-padding-desktop: 100px 0;
+  --section-padding-mobile: 70px 0;
+
+  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease;
 
+  /* Border radius */
   --border-radius: 10px;
   --border-radius-lg: 20px;
   --border-radius-xl: 24px;
   --border-radius-full: 9999px;
 
-  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+  /* Shadows */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.07);
   --shadow-base: 0 8px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
-  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.12);
 
-  --max-width: 1200px;
-  --container-padding: 24px;
-  --container-padding-desktop: 48px;
+  /* Icon enhancements */
+  --icon-bg: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  --icon-ring: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  --icon-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }

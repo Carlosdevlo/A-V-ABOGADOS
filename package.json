@@ -4,7 +4,7 @@
   "description": "A&V Abogados - Profesionales en Seguros y Responsabilidad Civil. Representación jurídica para víctimas de accidentes de tránsito en Colombia.",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js server.js",
     "start": "node server.js"
   },
   "keywords": [

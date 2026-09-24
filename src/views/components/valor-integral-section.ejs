@@ -1,0 +1,61 @@
+<section class="valor-integral section" id="oferta-de-valor">
+  <div class="container">
+    <div class="section__header" data-aos="fade-up">
+      <h2 class="section__title">Oferta de Valor Integral para Víctimas de Accidentes de Tránsito y Homicidios Culposos</h2>
+      <p class="section__subtitle">
+        Tu bienestar es primero. Tu caso es importante. Tu recuperación es nuestra prioridad.
+      </p>
+    </div>
+
+    <div class="valor-integral__intro" data-aos="fade-up" data-aos-delay="100">
+      <p class="valor-integral__text">
+        En nuestra firma acompañamos a las víctimas y sus familias con un servicio humano,
+        cercano y altamente especializado, que combina apoyo jurídico, físico, emocional
+        y financiero para que no enfrentes este proceso solo.
+      </p>
+    </div>
+
+    <div class="valor-integral__grid">
+      <% valorBenefits.forEach((benefit, index) => { %>
+        <div class="valor-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="valor-card__number"><%= benefit.number %></div>
+          <div class="valor-card__icon">
+            <i data-lucide="<%= benefit.icon %>" aria-hidden="true"></i>
+          </div>
+          <h3 class="valor-card__title"><%= benefit.title %></h3>
+          <p class="valor-card__text"><%= benefit.description %></p>
+
+          <% if (benefit.benefits && benefit.benefits.length) { %>
+            <ul class="valor-card__list">
+              <% benefit.benefits.forEach((item) => { %>
+                <li class="valor-card__list-item">
+                  <i data-lucide="check" class="valor-card__list-icon" aria-hidden="true"></i>
+                  <%= item %>
+                </li>
+              <% }) %>
+            </ul>
+          <% } %>
+
+          <% if (benefit.special_note) { %>
+            <div class="valor-card__note">
+              <i data-lucide="<%= benefit.note_icon || 'info' %>" class="valor-card__note-icon" aria-hidden="true"></i>
+              <%= benefit.special_note %>
+            </div>
+          <% } %>
+
+          <% if (benefit.highlight) { %>
+            <div class="valor-card__highlight"><%= benefit.highlight %></div>
+          <% } %>
+
+          <% if (benefit.highlight_note) { %>
+            <div class="valor-card__highlight-note"><%= benefit.highlight_note %></div>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="valor-integral__cta" data-aos="fade-up" data-aos-delay="800">
+      <a href="#contacto" class="btn btn--primary btn--lg">Solicitar valoración sin costo</a>
+    </div>
+  </div>
+</section>

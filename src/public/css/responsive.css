@@ -36,11 +36,24 @@
     padding-block: 50px;
   }
 
-  .services-claimation__grid,
+  .services-grid,
   .services-claiment__grid,
   .legal-services__grid,
   .client-type__grid {
     grid-template-columns: 1fr;
+  }
+
+  .services-secondary {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-featured__content {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-secondary-card__body {
+    padding: 1.75rem 1.25rem 1.25rem;
   }
 
   .results-cta__grid {
@@ -129,12 +142,12 @@
     font-size: 1.75rem;
   }
 
-  .about__grid {
+  .recovery__grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .about__image {
+  .recovery__image {
     max-width: 600px;
     margin-inline: auto;
   }
@@ -179,14 +192,21 @@
     grid-template-columns: 1fr;
   }
 
-  .services-claimation__grid,
-  .client-type__grid {
+  .services-secondary {
     grid-template-columns: 1fr;
   }
 
-  .service-card,
-  .client-type-card {
-    padding: 1.75rem;
+  .service-secondary-card__body {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .valor-integral__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .valor-card {
+    padding: 2rem 1.5rem;
   }
 
   /* Smaller section titles */
@@ -218,6 +238,19 @@
 
   .faq__answer {
     padding: 0 1.25rem 1.25rem;
+  }
+
+  /* Banner on mobile */
+  .banner__content {
+    padding: 2rem 1rem;
+  }
+
+  .banner__title {
+    font-size: 1.5rem;
+  }
+
+  .banner__subtitle {
+    font-size: 1rem;
   }
 }
 
@@ -254,7 +287,7 @@
     font-size: 2.5rem;
   }
 
-  .about__grid {
+  .recovery__grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -271,9 +304,9 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .services-claimation__grid,
-  .client-type__grid {
+  .services-secondary {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .contact__grid {
@@ -304,8 +337,8 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .services-claimation__grid {
-    grid-template-columns: repeat(5, 1fr);
+  .services-secondary {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .client-type__grid {

@@ -10,11 +10,12 @@ const homeController = {
         coverage: 'Nacional'
       },
       services: [
-        { id: 'da-Emergente', icon: 'shield', title: 'Daño Emergente', description: 'Cobertura de gastos médicos y gastos necesarios derivados de un accidente.' },
-        { id: 'perjuicio-moral', icon: 'heart', title: 'Perjuicio Moral', description: 'Indemnización por el daño emocional y psicológico causado por el accidente.' },
-        { id: 'lucro-cesante', icon: 'bank', title: 'Lucro Cesante', description: 'Compensación por los ingresos que dejó de generar debido a la inmovilización.' },
-        { id: 'danos-salud', icon: 'health', title: 'Daño a la salud', description: 'Cobertura de tratamientos médicos, fisioterapia y rehabilitación requerida.' },
-        { id: 'danos-materiales', icon: 'home', title: 'Daños materiales', description: 'Reparación o reemplazo de bienes dañados en el siniestro.' }
+        { id: 'accidentes-transito', icon: 'car', title: 'Accidentes de tránsito', description: 'Defendemos sus derechos y le acompañamos para reclamar una indemnización justa ante accidentes de tránsito.', image: '/images/services-img/accidentes-transito.jpg', featured: true },
+        { id: 'indemnizaciones', icon: 'file-text', title: 'Indemnizaciones', description: 'Exigimos el reconocimiento de daños morales, lucro cesante y gastos médicos ante las aseguradoras.', image: '/images/services-img/indemnizaciones.jpg', featured: false },
+        { id: 'lesiones-personales', icon: 'heart-pulse', title: 'Lesiones personales', description: 'Representación integral para lesiones físicas y psicológicas causadas por negligencia.', image: '/images/services-img/lesiones-personales.jpg', featured: false },
+        { id: 'homicidio-culposo', icon: 'gavel', title: 'Homicidio culposo', description: 'Asistencia jurídica para familias afectadas por homicidios culposos y defensa ante la Fiscalía.', image: '/images/services-img/homicidio-culposo.jpg', featured: false },
+        { id: 'acompanamiento-integral', icon: 'hand-heart', title: 'Acompañamiento integral', description: 'Lo acompañamos en cada etapa del proceso, desde la gestión de su caso hasta la obtención del resultado.', image: '/images/services-img/acompanamiento.jpg', featured: false },
+        { id: 'asesoria-juridica', icon: 'shield', title: 'Asesoría jurídica', description: 'Orientación legal especializada sin costo para evaluar su caso y determinar la mejor estrategia.', image: '/images/services-img/asesoria-juridica.jpg', featured: false }
       ],
       legalServices: [
         { id: 1, title: 'Reclamación ante compañías de seguros', description: 'Exigimos una justa indemnización por daños y perjuicios ante las compañías aseguradoras.' },
@@ -44,6 +45,84 @@ const homeController = {
         { question: '¿También me acompañan ante Fiscalía?', answer: 'Sí. Asistimos sin costo alguno frente al proceso penal en la Fiscalía.' },
         { question: '¿Pueden evaluar pérdida de capacidad laboral?', answer: 'Sí. Evaluamos su posible pérdida de capacidad laboral (PCL) y gestionamos el reconocimiento correspondiente.' },
         { question: '¿Atienden víctimas fuera de Bogotá?', answer: 'Sí. Hemos representado a más de 256 víctimas de accidentes de tránsito a nivel nacional.' }
+      ],
+      valorBenefits: [
+        {
+          number: '01',
+          icon: 'car',
+          title: 'Servicio de transporte gratuito',
+          description: 'Sabemos que después de un accidente la movilidad puede ser difícil. Por eso, te enviamos transporte sin costo para que puedas acercarte a nuestras oficinas, revisar tu caso y recibir orientación profesional sin preocuparte por desplazamientos.'
+        },
+        {
+          number: '02',
+          icon: 'heart-pulse',
+          title: 'Valoración médica y fisioterapia sin costo',
+          description: 'Tu salud es lo más importante.',
+          benefits: [
+            'Valoración médica inicial para revisar tu estado físico.',
+            'Sesión de fisioterapia con profesionales certificados para apoyar tu recuperación y aliviar molestias derivadas del accidente.'
+          ]
+        },
+        {
+          number: '03',
+          icon: 'dove',
+          title: 'Terapias psicológicas de duelo',
+          description: 'Cuando el accidente involucra la pérdida de un ser querido, acompañamos a tu familia con:',
+          note_icon: 'shield-alert',
+          special_note: 'Casos de homicidio',
+          benefits: [
+            'Terapias psicológicas de duelo.',
+            'Acompañamiento emocional especializado.',
+            'Sesiones familiares para manejo de crisis.'
+          ],
+          highlight: 'Tu bienestar emocional también es parte de la reparación integral.'
+        },
+        {
+          number: '04',
+          icon: 'file-text',
+          title: 'Gestión del SOAT sin costo',
+          description: 'Nos encargamos de reclamar el SOAT por ti.',
+          benefits: [
+            'Incapacidades',
+            'Gastos médicos',
+            'Transporte',
+            'Gastos funerarios, si aplica'
+          ],
+          highlight: 'Todo sin ningún costo adicional.'
+        },
+        {
+          number: '05',
+          icon: 'car-crash',
+          title: 'Reclamación de daños materiales del vehículo',
+          description: 'Te ayudamos a gestionar la indemnización por los daños de tu vehículo.',
+          benefits: [
+            'Acompañamiento técnico',
+            'Negociación con aseguradoras',
+            'Revisión de talleres y presupuestos',
+            'Defensa de tus derechos como víctima'
+          ]
+        },
+        {
+          number: '06',
+          icon: 'wallet',
+          title: 'Apoyo económico mensual',
+          description: 'Si estás pasando por dificultades económicas, te apoyamos con una ayuda mensual mientras avanzamos en tu proceso de indemnización.',
+          highlight: '$300.000',
+          highlight_note: 'Este apoyo será descontado del valor final que recibas, sin intereses ni costos ocultos.'
+        },
+        {
+          number: '07',
+          icon: 'trending-up',
+          title: 'Asesoría gratuita para invertir tu indemnización',
+          description: 'Cuando recibas tu indemnización, te ayudamos a tomar decisiones inteligentes.',
+          benefits: [
+            'Asesoría financiera gratuita',
+            'Opciones de inversión seguras',
+            'Proyección de rendimiento',
+            'Acompañamiento para proteger tu dinero'
+          ],
+          highlight: 'Queremos que tu indemnización se convierta en una oportunidad de crecimiento.'
+        }
       ]
     };
   },
