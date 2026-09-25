@@ -77,7 +77,8 @@
   .valor-integral__grid,
   .results__grid,
   .stats__grid,
-  .resultados__galeria {
+  .resultados__galeria,
+  .companies__grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }

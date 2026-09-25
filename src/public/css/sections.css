@@ -770,53 +770,73 @@
 }
 
 /* ========================================
-   Companies
-   ======================================== */
+    Companies
+    ======================================== */
 .companies {
   background: var(--color-light);
   padding: 70px 0;
 }
 
-.companies__carousel {
-  text-align: center;
-  overflow: hidden;
-}
-
-.companies__track {
-  display: flex;
-  flex-wrap: wrap;
+.companies__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .company-logo {
-  opacity: 0.6;
-  transition: var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.7;
   filter: grayscale(30%);
+  transition: var(--transition-base);
 }
 
 .company-logo:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.05);
   filter: grayscale(0);
 }
 
-.company-logo img {
-  max-height: 50px;
+.company-logo__img {
+  width: 160px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.company-logo__img img {
   max-width: 140px;
+  max-height: 65px;
   width: auto;
   height: auto;
+  object-fit: contain;
   transition: var(--transition-base);
 }
 
-.company-logo:hover img {
+.company-logo:hover .company-logo__img img {
   filter: grayscale(0);
 }
 
+.company-logo__name {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  transition: var(--transition-base);
+}
+
+.company-logo:hover .company-logo__name {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
 .companies__note {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   font-size: 0.9rem;
   color: var(--color-text-secondary);
   font-style: italic;
@@ -1465,6 +1485,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .companies__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 767px) {
   .section {
     padding-block: 60px;
@@ -1536,6 +1562,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
+
+  .companies__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (min-width: 1441px) {
@@ -1553,6 +1583,10 @@
 
   .client-type__grid {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .companies__grid {
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .valor-integral__grid {
