@@ -1,0 +1,74 @@
+<section class="acompana section" id="quienes-somos">
+  <div class="container">
+    <div class="section__header" data-aos="fade-up">
+      <div class="section__badge">
+        <span class="section__badge-dot"></span>
+        <span class="section__badge-text">Acompañamiento integral</span>
+      </div>
+      <h2 class="section__title">Oferta de Valor Integral para Víctimas de Accidentes de Tránsito y Homicidios Culposos</h2>
+      <p class="section__subtitle">
+        En nuestra firma acompañamos a las víctimas y sus familias con un servicio humano,
+        cercano y altamente especializado, que combina apoyo jurídico, físico, emocional
+        y financiero para que no enfrentes este proceso solo.
+      </p>
+      <div class="section__divider">
+        <img src="/images/brand/av-logo.png" alt="A&V Abogados" class="acompana__logo-img" loading="lazy" width="200" height="60">
+      </div>
+    </div>
+
+    <div class="acompana__intro" data-aos="fade-up" data-aos-delay="100">
+      <p class="acompana__text">
+        En A&V Abogados nos sensibilizamos con la situación de las víctimas de accidentes de tránsito.
+        Por ello, ofrecemos acompañamiento jurídico integral desde el momento del siniestro hasta la
+        obtención de una indemnización justa por parte de las aseguradoras.
+      </p>
+    </div>
+
+    <div class="acompana__list">
+      <% valorBenefits.forEach((benefit, index) => { %>
+        <div class="acompana__item" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="acompana__item-marker">
+            <span class="acompana__item-number"><%= benefit.number %></span>
+            <div class="acompana__item-icon">
+              <i data-lucide="<%= benefit.icon %>" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="acompana__item-content">
+            <h3 class="acompana__item-title"><%= benefit.title %></h3>
+            <p class="acompana__item-text"><%= benefit.description %></p>
+
+            <% if (benefit.benefits && benefit.benefits.length) { %>
+              <ul class="acompana__item-list">
+                <% benefit.benefits.forEach((item) => { %>
+                  <li class="acompana__item-list-item">
+                    <span class="acompana__item-bullet"></span>
+                    <%= item %>
+                  </li>
+                <% }) %>
+              </ul>
+            <% } %>
+
+            <% if (benefit.special_note) { %>
+              <div class="acompana__item-note">
+                <i data-lucide="<%= benefit.note_icon || 'info' %>" class="acompana__item-note-icon" aria-hidden="true"></i>
+                <span><%= benefit.special_note %></span>
+              </div>
+            <% } %>
+
+            <% if (benefit.highlight) { %>
+              <div class="acompana__item-highlight"><%= benefit.highlight %></div>
+            <% } %>
+
+            <% if (benefit.highlight_note) { %>
+              <div class="acompana__item-highlight-note"><%= benefit.highlight_note %></div>
+            <% } %>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="acompana__cta" data-aos="fade-up" data-aos-delay="800">
+      <a href="#contacto" class="btn btn--primary btn--lg">Solicitar valoración sin costo</a>
+    </div>
+  </div>
+</section>
