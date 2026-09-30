@@ -898,7 +898,7 @@
     position: absolute;
     left: 24px;
     top: 0;
-    bottom: -3rem;
+    bottom: -2rem;
     width: 2px;
     background: var(--timeline-line);
     z-index: -1;

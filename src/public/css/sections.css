@@ -106,7 +106,7 @@
 
 /* Container */
 .container {
-  width: min(100% - 40px, 1440px);
+  width: min(100% - 40px, var(--max-width));
   margin-inline: auto;
   padding-inline: 20px;
 }
@@ -361,6 +361,10 @@
   padding: 0 1.5rem 1.25rem;
   background-color: var(--color-light-alt);
   display: none;
+}
+
+.faq__answer--is-open {
+  display: block;
 }
 
 .faq__answer p {

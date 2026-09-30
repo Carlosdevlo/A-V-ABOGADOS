@@ -21,6 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ===== Scroll reveal animations (AOS-like) ===== */
   var animatedElements = document.querySelectorAll('[data-aos]');
 
+  var applyAOS = function(el) {
+    el.classList.add('aos-animate');
+    el.style.opacity = '1';
+    el.style.transform = 'translate(0) scale(1)';
+  };
+
   if ('IntersectionObserver' in window) {
     var observerOptions = {
       threshold: 0.1,
@@ -35,9 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
           var delay = parseInt(el.getAttribute('data-aos-delay') || '0', 10);
 
           var applyAnimation = function() {
-            el.classList.add('aos-animate');
-            el.style.opacity = '1';
-            el.style.transform = 'translate(0) scale(1)';
+            applyAOS(el);
             observer.unobserve(el);
           };
 
@@ -53,12 +57,15 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(function(el) {
       observer.observe(el);
     });
+
+    /* Safety fallback: if IntersectionObserver hasn't revealed elements
+       within 3 seconds (common on slow mobile), reveal all */
+    setTimeout(function() {
+      var unrevealed = document.querySelectorAll('[data-aos]:not(.aos-animate)');
+      unrevealed.forEach(applyAOS);
+    }, 3000);
   } else {
-    animatedElements.forEach(function(el) {
-      el.classList.add('aos-animate');
-      el.style.opacity = '1';
-      el.style.transform = 'translate(0) scale(1)';
-    });
+    animatedElements.forEach(applyAOS);
   }
 
   /* ===== Counter animations ===== */
@@ -117,9 +124,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (answer) {
           if (expanded) {
-            answer.style.display = 'none';
+            answer.classList.remove('faq__answer--is-open');
           } else {
-            answer.style.display = 'block';
+            answer.classList.add('faq__answer--is-open');
           }
         }
       });

@@ -1,10 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
+  'use strict';
+
   var toggle = document.getElementById('navbar-toggle');
   var menu = document.getElementById('navbar-menu');
   var overlay = document.getElementById('navbar-overlay');
   var navContainer = document.getElementById('navbar-container');
 
   if (!toggle || !menu || !navContainer) return;
+
+  function isModalOpen() {
+    var modals = document.querySelectorAll('.modal:not([hidden])');
+    for (var i = 0; i < modals.length; i++) {
+      if (modals[i].classList.contains('modal--open')) return true;
+    }
+    return false;
+  }
+
+  function getScrollbarWidth() {
+    if (document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+      return 0;
+    }
+    var scrollDiv = document.createElement('div');
+    scrollDiv.style.visibility = 'hidden';
+    scrollDiv.style.overflow = 'scroll';
+    scrollDiv.style.position = 'absolute';
+    scrollDiv.style.top = '0';
+    scrollDiv.style.width = '100px';
+    scrollDiv.style.height = '100px';
+    document.body.appendChild(scrollDiv);
+    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+    document.body.removeChild(scrollDiv);
+    return scrollbarWidth;
+  }
+
+  function lockBodyScroll(lock) {
+    var scrollbarWidth = getScrollbarWidth();
+    if (lock) {
+      if (!isModalOpen()) {
+        document.body.style.overflow = 'hidden';
+        if (scrollbarWidth > 0) {
+          document.body.style.paddingRight = scrollbarWidth + 'px';
+        }
+      }
+    } else {
+      if (!isModalOpen()) {
+        document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
+      }
+    }
+  }
 
   var updateNavbarMode = function() {
     var temp = document.createElement('div');
@@ -42,10 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
       toggle.classList.remove('navbar__toggle--open');
       toggle.setAttribute('aria-expanded', 'false');
       if (overlay) overlay.classList.remove('navbar__overlay--active');
-      document.body.style.overflow = '';
+      lockBodyScroll(false);
     } else if (!shouldBeMobile && isMobileMode) {
       menu.classList.remove('navbar__menu--mobile');
       toggle.classList.remove('navbar__toggle--visible');
+      lockBodyScroll(false);
     }
   };
 
@@ -59,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (overlay) {
       overlay.classList.toggle('navbar__overlay--active', isOpen);
     }
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    lockBodyScroll(isOpen);
   };
 
   toggle.addEventListener('click', function() {

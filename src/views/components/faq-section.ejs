@@ -18,7 +18,7 @@
             <span><%= faq.question %></span>
             <i data-lucide="chevron-down" class="faq__icon" aria-hidden="true"></i>
           </button>
-          <div id="faq-answer-<%= index %>" class="faq__answer" style="<%= index === 0 ? 'display: block;' : 'display: none;' %>">
+          <div id="faq-answer-<%= index %>" class="faq__answer<%= index === 0 ? ' faq__answer--is-open' : '' %>">
             <p><%= faq.answer %></p>
           </div>
         </div>

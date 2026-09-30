@@ -665,3 +665,87 @@
 
   scroll-behavior: auto;
 }
+
+/* ========================================
+   Touch Target Optimization — Mobile
+   ======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 0.9rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  .btn--xl {
+    padding: 1rem 2.25rem;
+    font-size: 1.1rem;
+  }
+
+  .btn--nav-cta {
+    min-height: 48px;
+    padding: 0.85rem 1.75rem;
+  }
+
+  .cta-final__buttons .btn {
+    width: 100%;
+  }
+
+  .cta-final__form-wrapper {
+    margin-top: 2rem;
+  }
+
+  .contact-form {
+    padding: 2rem 1.5rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .form__input,
+  .form__select,
+  .form__textarea {
+    min-height: 48px;
+    padding: 0.9rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .form__select {
+    min-height: 48px;
+  }
+
+  .form__textarea {
+    min-height: 100px;
+  }
+
+  .form__checkbox-label {
+    padding: 0.75rem 0;
+    font-size: 0.95rem;
+  }
+
+  .contact__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .contact__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Ensure content doesn't get hidden behind fixed buttons */
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .whatsapp-float {
+    pointer-events: none;
+  }
+
+  .whatsapp-float__link {
+    pointer-events: auto;
+  }
+}

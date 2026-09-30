@@ -255,8 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var formData = new FormData(form);
       var params = new URLSearchParams();
-      for (var i = 0; i < formData.entries.length; i++) {
-        var pair = formData.entries[i];
+      for (var pair of formData.entries()) {
         params.append(pair[0], pair[1]);
       }
 
