@@ -380,8 +380,8 @@
     gap: 3rem;
   }
 
-  .contact__info {
-    text-align: left;
+   .contact__info {
+    text-align: center;
   }
 
   .cta-final__layout {
@@ -451,8 +451,8 @@
     gap: 4rem;
   }
 
-  .contact__info {
-    text-align: left;
+   .contact__info {
+    text-align: center;
   }
 
   .cta-final__layout {
