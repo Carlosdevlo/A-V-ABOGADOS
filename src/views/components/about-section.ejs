@@ -1,32 +1,38 @@
-<section class="recovery section" id="quienes-somos">
+<section class="about section" id="quienes-somos">
   <div class="container">
-    <div class="recovery__grid">
-      <div class="recovery__image" data-aos="fade-right">
-        <img src="/images/sections/av-recuperacion.png" alt="Acompañamiento jurídico profesional - A&V Abogados" class="recovery__img" loading="lazy" width="600" height="700">
-      </div>
-      <div class="recovery__content" data-aos="fade-left">
-        <h2 class="section__title">Lo acompañamos durante todo el proceso</h2>
-        <p class="section__subtitle">
-          Somos un equipo de profesionales del derecho especializados en defensa de víctimas de accidentes de tránsito.
-        </p>
-        <p class="section__text">
-          En A&V Abogados nos sensibilizamos con la situación de las víctimas de accidentes de tránsito.
-          Por ello, ofrecemos acompañamiento jurídico integral desde el momento del siniestro hasta la
-          obtención de una indemnización justa por parte de las aseguradoras.
-        </p>
-        <div class="recovery__features">
-          <div class="recovery__feature">
-            <i data-lucide="shield-check" class="recovery__feature-icon" aria-hidden="true"></i>
-            <span>Defendemos sus derechos con experiencia</span>
-          </div>
-          <div class="recovery__feature">
-            <i data-lucide="clock" class="recovery__feature-icon" aria-hidden="true"></i>
-            <span>Atención personalizada y ágil</span>
-          </div>
+    <div class="about__layout" data-aos="fade-up">
+      <div class="about__media" data-aos="fade-right">
+        <div class="about__img-wrap">
+          <img src="<%= aboutContent.image %>" alt="Abogados profesionales en conversación - A&V Abogados" class="about__img" loading="lazy" width="600" height="500">
+          <div class="about__img-overlay"></div>
         </div>
-        <a href="#contacto" class="btn btn--primary">Evaluar mi caso sin costo</a>
+      </div>
+
+      <div class="about__content" data-aos="fade-left">
+        <div class="section__badge">
+          <span class="section__badge-dot"></span>
+          <span class="section__badge-text"><%= aboutContent.badge %></span>
+        </div>
+        <h2 class="section__title"><%= aboutContent.title %></h2>
+        <p class="section__subtitle">
+          <%= aboutContent.subtitle %>
+        </p>
+        <div class="about__description">
+          <p><%= aboutContent.description %></p>
+        </div>
+
+        <div class="about__values" data-aos="fade-up" data-aos-delay="200">
+          <% aboutContent.values.forEach((value, index) => { %>
+            <div class="about__value" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+              <div class="about__value-icon">
+                <i data-lucide="<%= value.icon %>" aria-hidden="true"></i>
+              </div>
+              <h3 class="about__value-title"><%= value.title %></h3>
+              <p class="about__value-text"><%= value.description %></p>
+            </div>
+          <% }) %>
+        </div>
       </div>
     </div>
   </div>
 </section>
-

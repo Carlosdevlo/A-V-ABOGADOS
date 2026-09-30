@@ -1,0 +1,34 @@
+<section class="honorarios section" id="honorarios">
+  <div class="container">
+    <div class="section__header" data-aos="fade-up">
+      <div class="section__badge">
+        <span class="section__badge-dot"></span>
+        <span class="section__badge-text">Honorarios</span>
+      </div>
+      <h2 class="section__title"><%= fees.title %></h2>
+      <p class="section__subtitle">
+        <%= fees.subtitle %>
+      </p>
+    </div>
+
+    <div class="honorarios__grid" data-aos="fade-up" data-aos-delay="100">
+      <% fees.items.forEach((item, index) => { %>
+        <div class="honorarios__card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="honorarios__card-icon">
+            <i data-lucide="<%= index === 0 ? 'file-text' : index === 1 ? 'banknote' : 'shield' %>" aria-hidden="true"></i>
+          </div>
+          <h3 class="honorarios__card-title"><%= item.title %></h3>
+          <p class="honorarios__card-text"><%= item.description %></p>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="honorarios__percentage" data-aos="fade-up" data-aos-delay="400">
+      <div class="honorarios__percentage-badge">
+        <span class="honorarios__percentage-value"><%= fees.percentage %></span>
+        <span class="honorarios__percentage-label">Sobre la indemnización obtenida</span>
+      </div>
+      <p class="honorarios__percentage-note"><%= fees.percentageNote %></p>
+    </div>
+  </div>
+</section>

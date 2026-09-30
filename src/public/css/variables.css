@@ -133,4 +133,17 @@
   --font-size-display-sm: 4rem;
   --font-size-display-md: 6rem;
   --font-size-display-lg: 9rem;
+
+  /* Animation easing presets */
+  --ease-out-quart: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out-cubic: cubic-bezier(0.21, 0.44, 0.74, 0.95);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.68, 1);
+
+  /* Scroll snap offset */
+  --scroll-snap-offset: 80px;
+
+  /* Z-index layers */
+  --z-modal: 9999;
+  --z-modal-backdrop: 9998;
+  --z-modal-content: 10000;
 }

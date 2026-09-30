@@ -1,6 +1,10 @@
 <section class="faq section" id="faq">
   <div class="container">
     <div class="section__header" data-aos="fade-up">
+      <div class="section__badge">
+        <span class="section__badge-dot"></span>
+        <span class="section__badge-text">Preguntas frecuentes</span>
+      </div>
       <h2 class="section__title">Preguntas frecuentes</h2>
       <p class="section__subtitle">
         Resolvemos las dudas más comunes sobre nuestro servicio.
@@ -8,7 +12,7 @@
     </div>
 
     <div class="faq__list" data-aos="fade-up" data-aos-delay="100">
-      <% faqs.forEach((faq, index) => { %>
+      <% faqs.slice(0, 6).forEach((faq, index) => { %>
         <div class="faq__item">
           <button class="faq__question" aria-expanded="<%= index === 0 ? 'true' : 'false' %>" aria-controls="faq-answer-<%= index %>">
             <span><%= faq.question %></span>

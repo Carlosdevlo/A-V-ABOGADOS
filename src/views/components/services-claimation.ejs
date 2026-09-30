@@ -12,46 +12,26 @@
     </div>
 
     <div class="services-grid" data-aos="fade-up" data-aos-delay="100">
-      <% const featured = services.find(s => s.featured); %>
-      <% const secondary = services.filter(s => !s.featured); %>
-
-      <a href="#contacto" class="service-featured" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-featured__img-wrap">
-          <img src="<%= featured.image %>" alt="<%= featured.title %> - A&V Abogados" class="service-featured__img" loading="eager" width="800" height="500">
-          <div class="service-featured__overlay"></div>
-        </div>
-        <div class="service-featured__content">
-          <div class="service-featured__icon">
-            <i data-lucide="<%= featured.icon %>" aria-hidden="true"></i>
+      <% services.forEach((service, index) => { %>
+        <a href="#contacto" class="service-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="service-card__img-wrap">
+            <img src="<%= service.image %>" alt="<%= service.title %> - A&V Abogados" class="service-card__img" loading="lazy" width="400" height="300">
+            <div class="service-card__overlay"></div>
           </div>
-          <h3 class="service-featured__title"><%= featured.title %></h3>
-          <p class="service-featured__text"><%= featured.description %></p>
-          <span class="service-featured__cta">Conocer más <i data-lucide="arrow-right" aria-hidden="true"></i></span>
-        </div>
-      </a>
-
-      <div class="services-secondary">
-        <% secondary.forEach((service, index) => { %>
-          <a href="#contacto" class="service-secondary-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
-            <div class="service-secondary-card__img-wrap">
-              <img src="<%= service.image %>" alt="<%= service.title %> - A&V Abogados" class="service-secondary-card__img" loading="lazy" width="400" height="300">
-              <div class="service-secondary-card__overlay"></div>
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <i data-lucide="<%= service.icon %>" aria-hidden="true"></i>
             </div>
-            <div class="service-secondary-card__body">
-              <div class="service-secondary-card__icon">
-                <i data-lucide="<%= service.icon %>" aria-hidden="true"></i>
-              </div>
-              <h3 class="service-secondary-card__title"><%= service.title %></h3>
-              <p class="service-secondary-card__text"><%= service.description %></p>
-              <span class="service-secondary-card__cta">Conocer más <i data-lucide="arrow-right" aria-hidden="true"></i></span>
-            </div>
-          </a>
-        <% }) %>
-      </div>
+            <h3 class="service-card__title"><%= service.title %></h3>
+            <p class="service-card__text"><%= service.description %></p>
+            <span class="service-card__cta">Conocer más <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+      <% }) %>
     </div>
 
-    <div class="section__cta" data-aos="fade-up" data-aos-delay="500">
-      <a href="#contacto" class="btn btn--primary btn--lg">Solicitar asesoría sin costo</a>
+    <div class="section__cta" data-aos="fade-up" data-aos-delay="600">
+      <a href="javascript:void(0)" class="btn btn--primary btn--lg" data-modal-trigger>Solicitar asesoría sin costo</a>
     </div>
   </div>
 </section>

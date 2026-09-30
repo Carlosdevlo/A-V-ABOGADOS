@@ -1,26 +1,32 @@
-<section class="problem section" id="problema">
+<section class="problem-section section" id="problema">
   <div class="container">
-    <div class="problem__layout">
-      <div class="problem__text" data-aos="fade-right">
-        <div class="section__badge">
-          <span class="section__badge-dot"></span>
-          <span class="section__badge-text">Situación de riesgo</span>
-        </div>
-        <h2 class="problem__title">¿Fue víctima de un accidente de tránsito?</h2>
-        <p class="problem__subtitle">
-          Después de un siniestro, cada decisión cuenta. Usted necesita un abogado
-          que entienda su situación y actúe de inmediato para proteger sus derechos.
-        </p>
-        <div class="problem__cta">
-          <a href="#contacto" class="btn btn--primary btn--lg">Evaluar mi caso sin costo</a>
-          <a href="<%= whatsappLink %>" class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp">
-            <i data-lucide="whatsapp" class="btn__icon" aria-hidden="true"></i> Hablar por WhatsApp
-          </a>
-        </div>
+    <div class="section__header" data-aos="fade-up">
+      <div class="section__badge">
+        <span class="section__badge-dot"></span>
+        <span class="section__badge-text">Guía importante</span>
       </div>
-      <div class="problem__visual" data-aos="fade-left">
-        <img src="/images/sections/problema-legal.jpg" alt="Abogado revisando documentos jurídicos - A&V Abogados" class="problem__img" loading="lazy" width="600" height="400">
-      </div>
+      <h2 class="section__title">¿Qué hacer después de un accidente?</h2>
+      <p class="section__subtitle">
+        Guía rápida para proteger sus derechos desde el primer momento.
+      </p>
+    </div>
+
+    <div class="problem-grid" data-aos="fade-up" data-aos-delay="100">
+      <% accidentSteps.forEach((step, index) => { %>
+        <div class="problem-step" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="problem-step__marker">
+            <span class="problem-step__number"><%= step.number %></span>
+          </div>
+          <div class="problem-step__content">
+            <h3 class="problem-step__title"><%= step.title %></h3>
+            <p class="problem-step__text"><%= step.description %></p>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="problem-grid__cta" data-aos="fade-up" data-aos-delay="700">
+      <a href="javascript:void(0)" class="btn btn--primary btn--lg" data-modal-trigger>Evaluar mi caso sin costo</a>
     </div>
   </div>
 </section>

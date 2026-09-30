@@ -4,6 +4,9 @@ class ContactModel {
     this.phone = data.phone || '';
     this.email = data.email || '';
     this.city = data.city || '';
+    this.accidentDate = data.accidentDate || '';
+    this.injuries = data.injuries || '';
+    this.ipat = data.ipat || '';
     this.message = data.message || '';
     this.caseType = data.caseType || '';
     this.createdAt = new Date().toISOString();
@@ -43,6 +46,9 @@ class ContactModel {
       phone: this.phone,
       email: this.email,
       city: this.city,
+      accidentDate: this.accidentDate,
+      injuries: this.injuries,
+      ipat: this.ipat,
       message: this.message,
       caseType: this.caseType,
       createdAt: this.createdAt

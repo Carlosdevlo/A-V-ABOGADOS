@@ -37,6 +37,9 @@ const contactController = {
         phone: sanitizeInput(req.body.phone),
         email: sanitizeInput(req.body.email),
         city: sanitizeInput(req.body.city),
+        accidentDate: sanitizeInput(req.body.accidentDate),
+        injuries: sanitizeInput(req.body.injuries),
+        ipat: sanitizeInput(req.body.ipat),
         message: sanitizeInput(req.body.message),
         caseType: sanitizeInput(req.body.caseType)
       };
@@ -48,7 +51,7 @@ const contactController = {
       if (req.xhr || req.headers.accept?.includes('application/json')) {
         return res.json({
           success: true,
-          message: 'Su caso ha sido enviado correctamente. Nos pondremos en contacto pronto.',
+          message: 'Recibimos su información. Un abogado de A&V lo contactará en horario hábil. Si su caso es urgente, escríbanos por WhatsApp al 300 881 1886.',
           contactId: contact.id
         });
       }
@@ -59,7 +62,7 @@ const contactController = {
         page: 'contact',
         whatsappLink,
         success: true,
-        successMessage: 'Su caso ha sido enviado correctamente. Nos pondremos en contacto pronto.'
+        successMessage: 'Recibimos su información. Un abogado de A&V lo contactará en horario hábil. Si su caso es urgente, escríbanos por WhatsApp al 300 881 1886.'
       });
     } catch (error) {
       console.error('Error al procesar el contacto:', error);

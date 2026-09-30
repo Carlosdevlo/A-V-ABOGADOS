@@ -1,0 +1,113 @@
+<div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" tabindex="-1" hidden>
+  <div class="modal__backdrop" data-modal-backdrop></div>
+  <div class="modal__container" data-modal-container>
+    <div class="modal__content">
+      <button type="button" class="modal__close" aria-label="Cerrar" data-modal-close>
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-title">Cuéntenos qué ocurrió</h2>
+        <p class="modal__subtitle" id="modal-desc">
+          Un abogado de nuestro equipo revisará su caso. La primera consulta no tiene costo.
+        </p>
+      </div>
+
+      <form class="contact__form contact__form--modal" id="contact-modal-form" novalidate>
+        <div class="form__group">
+          <label for="modal-name" class="form__label">Nombre completo *</label>
+          <input type="text" id="modal-name" name="name" class="form__input" required maxlength="100">
+          <span class="form__error" id="modal-name-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="modal-phone" class="form__label">Teléfono / WhatsApp *</label>
+          <input type="tel" id="modal-phone" name="phone" class="form__input" required maxlength="20">
+          <span class="form__error" id="modal-phone-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="modal-email" class="form__label">Correo electrónico</label>
+          <input type="email" id="modal-email" name="email" class="form__input" maxlength="100">
+          <span class="form__error" id="modal-email-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="modal-city" class="form__label">Ciudad *</label>
+          <input type="text" id="modal-city" name="city" class="form__input" required maxlength="60">
+          <span class="form__error" id="modal-city-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="modal-accidentDate" class="form__label">Fecha aproximada del accidente *</label>
+          <input type="date" id="modal-accidentDate" name="accidentDate" class="form__input" required>
+          <span class="form__error" id="modal-accidentDate-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="modal-injuries" class="form__label">¿Hubo personas lesionadas o fallecidas? *</label>
+          <select id="modal-injuries" name="injuries" class="form__select" required>
+            <option value="">Seleccione una opción</option>
+            <option value="lesionados">Sí, hubo lesionados</option>
+            <option value="fallecida">Sí, hubo una persona fallecida</option>
+            <option value="solo-danos">No, solo daños al vehículo</option>
+          </select>
+          <span class="form__error" id="modal-injuries-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="modal-ipat" class="form__label">¿Cuenta con el informe policial del accidente (IPAT)? *</label>
+          <select id="modal-ipat" name="ipat" class="form__select" required>
+            <option value="">Seleccione una opción</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+            <option value="no-se">No sé</option>
+          </select>
+          <span class="form__error" id="modal-ipat-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="modal-caseType" class="form__label">Tipo de caso *</label>
+          <select id="modal-caseType" name="caseType" class="form__select" required>
+            <option value="">Seleccione una opción</option>
+            <option value="accidente-transito">Lesiones en accidente de tránsito</option>
+            <option value="fallecimiento">Fallecimiento de un familiar</option>
+            <option value="aseguradora">Reclamación ante aseguradora</option>
+            <option value="danos">Daños al vehículo</option>
+            <option value="otro">Otro</option>
+          </select>
+          <span class="form__error" id="modal-caseType-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="modal-message" class="form__label">Cuéntenos brevemente qué ocurrió *</label>
+          <textarea id="modal-message" name="message" class="form__textarea" rows="4" required minlength="10" maxlength="1000"></textarea>
+          <span class="form__error" id="modal-message-error"></span>
+        </div>
+
+        <div class="form__group form__group--checkbox">
+          <label class="form__checkbox-label">
+            <input type="checkbox" name="privacy" value="on" class="form__checkbox" required>
+            <span class="form__checkmark"></span>
+            He leído y acepto la <a href="/politica-de-tratamiento-de-datos" target="_blank" rel="noopener noreferrer">política de tratamiento de datos personales</a>. *
+          </label>
+          <span class="form__error" id="modal-privacy-error"></span>
+        </div>
+
+        <div class="form__group form__group--checkbox">
+          <label class="form__checkbox-label">
+            <input type="checkbox" name="healthAuth" value="on" class="form__checkbox" required>
+            <span class="form__checkmark"></span>
+            Autorizo de manera expresa el tratamiento de mis datos de salud y de los relacionados con el accidente, con la finalidad de evaluar mi caso. Entiendo que no estoy obligado(a) a suministrar datos sensibles. *
+          </label>
+          <span class="form__error" id="modal-healthAuth-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--full" id="modal-submit-btn">
+          <span id="modal-submit-text">Enviar mi caso</span>
+          <i data-lucide="send" class="btn__icon" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

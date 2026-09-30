@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/whatsapp.css">
   <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/modal.css">
 
   <script defer src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
 
@@ -50,7 +51,7 @@
     "description": "Profesionales en Seguros y Responsabilidad Civil. Representación jurídica para víctimas de accidentes de tránsito en Colombia.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Av Calle 26 # 69 – 76, Edificio Elemento, Torre 3 Tierra, Oficina 1501",
+      "streetAddress": "Av Calle 26 # 69 - 76, Edificio Elemento, Torre 3 Tierra, Oficina 1501",
       "addressLocality": "Bogotá",
       "addressRegion": "Cundinamarca",
       "addressCountry": "CO"
@@ -71,21 +72,23 @@
     <%- include('components/problem-section') %>
     <%- include('components/services-claimation') %>
     <%- include('components/acompana-section') %>
-    <%- include('components/results-premium') %>
-    <%- include('components/stats-section') %>
+    <%- include('components/honorarios-section') %>
     <%- include('components/how-it-works') %>
-    <%- include('components/cases-section') %>
+    <%- include('components/about-section') %>
     <%- include('components/companies-section') %>
     <%- include('components/faq-section') %>
-    <%- include('components/cta-final') %>
+    <%- include('components/contact-section') %>
   </main>
+
+  <%- include('components/contact-modal') %>
 
   <%- include('partials/footer') %>
 
   <script src="/js/navbar.js" defer></script>
   <script src="/js/animations.js" defer></script>
-  <script src="/js/contact.js" defer></script>
+  <script src="/js/contact-modal.js" defer></script>
   <script src="/js/main.js" defer></script>
+  <script src="/js/contact.js" defer></script>
   <script>
     window.__WHATSAPP_LINK__ = "<%= whatsappLink %>";
   </script>
