@@ -34,13 +34,11 @@
   <link rel="stylesheet" href="/css/sections.css">
   <link rel="stylesheet" href="/css/premium.css">
   <link rel="stylesheet" href="/css/footer.css">
-  <link rel="stylesheet" href="/css/whatsapp.css">
   <link rel="stylesheet" href="/css/responsive.css">
 
   <script defer src="https://unpkg.com/lucide@0.450.0/dist/lucide.min.js"></script>
 </head>
-<body class="js <%= page || 'home' %>">
-  <%- include('partials/whatsapp-button') %>
+  <body class="js <%= page || 'home' %>">
   <%- include('partials/navbar') %>
   <main>
     <%- body %>
@@ -51,9 +49,6 @@
   <script src="/js/animations.js" defer></script>
   <script src="/js/contact.js" defer></script>
   <script src="/js/main.js" defer></script>
-  <script>
-    window.__WHATSAPP_LINK__ = <%= JSON.stringify(whatsappLink || '') %>;
-  </script>
   <script>
     lucide.createIcons();
   </script>

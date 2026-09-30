@@ -1,46 +1,54 @@
 /* ========================================
-   WhatsApp Floating Button — White circle with green WhatsApp mark
+   WhatsApp Floating Button — Professional design
    ======================================== */
+
 .whatsapp-float {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  bottom: 20px;
+  right: 20px;
   z-index: 1000;
   padding-inline-start: env(safe-area-inset-left);
   padding-inline-end: env(safe-area-inset-right);
   padding-bottom: env(safe-area-inset-bottom);
 }
- 
+
 .whatsapp-float__link {
+  --s: 60px;
+  position: absolute;
+  z-index: 2;
+  bottom: 8px;
+  right: 8px;
+  height: var(--s);
+  width: var(--s);
+  background-color: var(--color-whatsapp);
+  border-radius: 50%;
+  box-shadow: 0 4px 24px 0 rgba(7, 94, 84, 0.24);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  background: var(--color-text-light);
-  border: 2px solid var(--color-text-light);
-  border-radius: 50%;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
-  transition: var(--transition-base);
-  position: relative;
-  overflow: visible;
-  color: var(--color-whatsapp);
-  --whatsapp-mark: var(--color-whatsapp);
+  transition: background-color 0.2s linear;
+  outline: none;
 }
- 
+
 .whatsapp-float__link:hover {
-  background: var(--color-text-light);
-  border-color: var(--color-text-light);
-  transform: scale(1.08);
-  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+  background-color: var(--color-whatsapp-dark);
 }
- 
-.whatsapp-float__link:focus-visible {
-  outline: 3px solid var(--color-whatsapp-dark);
-  outline-offset: 3px;
+
+.whatsapp-float__link:active {
+  background-color: var(--color-whatsapp-dark);
+  transition: none;
 }
- 
-/* Tooltip on desktop hover */
+
+.whatsapp-float__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-text-light);
+  flex-shrink: 0;
+}
+
 @media (hover: hover) {
   .whatsapp-float__link::after {
     content: 'Hablar por WhatsApp';
@@ -60,7 +68,7 @@
     transition: opacity 0.3s ease, right 0.3s ease;
     z-index: -1;
   }
- 
+
   .whatsapp-float__link::before {
     content: '';
     position: absolute;
@@ -72,76 +80,38 @@
     opacity: 0;
     transition: opacity 0.3s ease, right 0.3s ease;
   }
- 
+
   .whatsapp-float__link:hover::after,
   .whatsapp-float__link:hover::before {
     opacity: 1;
     right: 70px;
   }
 }
- 
-/* WhatsApp icon — white SVG with green WhatsApp mark */
-.whatsapp-float__icon {
-  width: 36px;
-  height: 36px;
-  display: block;
-  fill: var(--whatsapp-mark);
-}
- 
-/* Small screens – larger touch target */
-@media (max-width: 480px) {
-  .whatsapp-float {
-    bottom: 24px;
-    right: 24px;
-  }
- 
+
+@media (orientation: landscape) and (height <= 480px),
+       (max-width: 480px) {
   .whatsapp-float__link {
-    width: 56px;
+    bottom: 4px;
+    right: 4px;
     height: 56px;
-  }
- 
-  .whatsapp-float__icon {
-    width: 32px;
-    height: 32px;
+    width: 56px;
   }
 }
- 
-@media (max-width: 380px) {
-  .whatsapp-float {
-    bottom: env(safe-area-inset-bottom, 16px);
-    right: 20px;
-  }
- 
-  .whatsapp-float__link {
-    width: 52px;
-    height: 52px;
-  }
- 
-  .whatsapp-float__icon {
-    width: 28px;
-    height: 28px;
-  }
-}
- 
-/* No horizontal scroll on very small screens */
+
 @media (max-width: 360px) {
   .whatsapp-float {
-    bottom: 16px;
-    right: 16px;
+    bottom: env(safe-area-inset-bottom, 16px);
+    right: env(safe-area-inset-right, 16px);
   }
- 
+
   .whatsapp-float__link {
-    width: 50px;
     height: 50px;
-  }
- 
-  .whatsapp-float__icon {
-    width: 26px;
-    height: 26px;
+    width: 50px;
+    bottom: 3px;
+    right: 3px;
   }
 }
- 
-/* Accessibility: reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
   .whatsapp-float__link {
     transition: none;
