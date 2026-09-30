@@ -11,6 +11,14 @@
   padding-inline-end: env(safe-area-inset-right);
   padding-bottom: env(safe-area-inset-bottom);
   pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+/* Hidden while the mobile nav drawer is open — it sits above the navbar and
+   would otherwise float over the menu and swallow taps */
+body.nav-open .whatsapp-float {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes wa-bounce-in {
