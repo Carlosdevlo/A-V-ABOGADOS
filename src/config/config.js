@@ -7,7 +7,6 @@ const config = {
     port: parseInt(process.env.PORT, 10) || 3000,
     host: process.env.HOST || 'localhost',
     env: process.env.NODE_ENV || 'development',
-    isProduction: process.env.NODE_ENV === 'production',
     website: process.env.WEBSITE || 'https://www.abogadosav.com'
   },
   contact: {

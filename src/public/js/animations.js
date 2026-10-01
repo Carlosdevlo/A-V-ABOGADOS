@@ -9,12 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
       el.style.opacity = '1';
       el.style.transform = 'none';
     });
-    document.querySelectorAll('[data-counter]').forEach(function(el) {
-      var target = parseInt(el.getAttribute('data-counter')) || 0;
-      var suffix = el.getAttribute('data-suffix') || '';
-      var prefix = el.getAttribute('data-prefix') || '';
-      el.textContent = prefix + target.toLocaleString('es-CO') + suffix;
-    });
     return;
   }
 
@@ -66,50 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 3000);
   } else {
     animatedElements.forEach(applyAOS);
-  }
-
-  /* ===== Counter animations ===== */
-  var counters = document.querySelectorAll('[data-counter]');
-  if (counters.length > 0 && 'IntersectionObserver' in window) {
-    var counterObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var target = parseInt(el.getAttribute('data-counter')) || 0;
-          var suffix = el.getAttribute('data-suffix') || '';
-          var prefix = el.getAttribute('data-prefix') || '';
-          var duration = 2000;
-          var step = Math.max(1, Math.floor(target / (duration / 16)));
-          var current = 0;
-          var isDecimal = el.getAttribute('data-counter').toString().indexOf('.') !== -1;
-
-          var timer = setInterval(function() {
-            current += step;
-            if (current >= target) {
-              current = target;
-              if (isDecimal) {
-                el.textContent = prefix + current.toFixed(2) + suffix;
-              } else {
-                el.textContent = prefix + current.toLocaleString('es-CO') + suffix;
-              }
-              clearInterval(timer);
-            } else {
-              if (isDecimal) {
-                el.textContent = prefix + current.toFixed(2) + suffix;
-              } else {
-                el.textContent = prefix + current.toLocaleString('es-CO') + suffix;
-              }
-            }
-          }, 16);
-
-          counterObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.6 });
-
-    counters.forEach(function(el) {
-      counterObserver.observe(el);
-    });
   }
 
   /* ===== FAQ accordion ===== */

@@ -32,13 +32,6 @@ class ContactModel {
     return contact;
   }
 
-  static async getAll() {
-    if (global.__contactsStorage === undefined) {
-      global.__contactsStorage = [];
-    }
-    return global.__contactsStorage;
-  }
-
   toJSON() {
     return {
       id: this.id,

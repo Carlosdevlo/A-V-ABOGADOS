@@ -69,18 +69,7 @@ const sanitizeInput = (str) => {
     .trim();
 };
 
-const validateRequired = (data, fields) => {
-  const errors = [];
-  fields.forEach(field => {
-    if (!data[field] || (typeof data[field] === 'string' && data[field].trim() === '')) {
-      errors.push(`El campo ${field} es obligatorio.`);
-    }
-  });
-  return errors;
-};
-
 module.exports = {
   contactValidationRules,
-  sanitizeInput,
-  validateRequired
+  sanitizeInput
 };

@@ -5,7 +5,6 @@ const rateLimit = require('express-rate-limit');
 const ejs = require('ejs');
 const config = require('./src/config/config');
 const homeRoutes = require('./src/routes/homeRoutes');
-const contactRoutes = require('./src/routes/contactRoutes');
 const contactController = require('./src/controllers/contactController');
 const { contactValidationRules } = require('./src/utils/validators');
 const WhatsappService = require('./src/services/whatsappService');
@@ -46,13 +45,6 @@ function createApp() {
   app.use(express.static(publicPath));
 
   app.use((req, res, next) => {
-    res.locals.config = {
-      company: config.app.name,
-      shortName: config.app.shortName,
-      website: config.app.website,
-      contact: config.contact,
-      year: new Date().getFullYear()
-    };
     res.locals.year = new Date().getFullYear();
     res.locals.whatsappLink = WhatsappService.buildLink();
     next();
@@ -68,7 +60,6 @@ function createApp() {
   app.use('/', homeRoutes);
   app.get('/contacto', contactController.renderContact);
   app.post('/contacto/submit', contactValidationRules, contactController.submitContact);
-  app.use('/contact', contactRoutes);
 
   app.use((req, res) => {
     res.status(404).render('pages/404', { title: 'Página no encontrada | A&V Abogados' });
