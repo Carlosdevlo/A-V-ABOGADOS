@@ -57,7 +57,7 @@ const homeController = {
       aboutContent: {
         badge: 'Quiénes somos',
         title: 'Abogados especializados en accidentes de tránsito y seguros',
-        subtitle: 'Más de 7 años de experiencia defendiendo los derechos de víctimas de accidentes de tránsito y familias afectadas por homicidios culposos en Colombia.',
+        subtitle: 'Más de 10 años de experiencia defendiendo los derechos de víctimas de accidentes de tránsito y familias afectadas por homicidios culposos en Colombia.',
         description: 'En A&V Abogados nos dedicamos exclusivamente a representar a víctimas de accidentes de tránsito, familiares de víctimas fatales y personas que enfrentan problemas con sus aseguradoras. Nuestro enfoque combina conocimiento profundo del derecho de seguros, responsabilidad civil y penal, con un trato humano y cercano que entiende las dificultades que vive su situación.',
         image: '/images/sections/hero-professional.jpg',
         values: [
@@ -79,9 +79,9 @@ const homeController = {
         { name: 'Zurich', logo: '/images/companies/Zurich.jpg' }
       ],
       stats: [
-        { value: '7', suffix: '', label: 'Años de experiencia', icon: 'award' },
-        { value: '256', suffix: '', label: 'Víctimas representadas', icon: 'users' },
-        { value: '$6.00', suffix: ' Millones', label: 'Indemnizaciones logradas', icon: 'trending-up' }
+        { value: '10', suffix: '', label: 'Años de experiencia', icon: 'award' },
+        { value: '1.032', suffix: '', label: 'Víctimas representadas', icon: 'users' },
+        { value: '$10.000', suffix: '+ millones', label: 'Indemnizaciones logradas', icon: 'trending-up' }
       ],
       location: {
         image: '/images/sections/sede_corporativa.jpg',
