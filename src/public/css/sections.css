@@ -328,6 +328,10 @@
   color: var(--color-text-secondary);
 }
 
+.stats__number {
+  min-width: 1ch;
+}
+
 .stats__label {
   margin: 0;
   font-size: 1rem;

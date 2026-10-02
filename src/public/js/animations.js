@@ -62,6 +62,79 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(applyAOS);
   }
 
+  /* ===== Count-up for stats ===== */
+  var statNumbers = document.querySelectorAll('.stats__number[data-count]');
+
+  if (statNumbers.length > 0) {
+    var CO_NUMBER = new Intl.NumberFormat('es-CO');
+    var COUNTER_DURATION = 700;
+    var COUNTER_STAGGER = 80;
+
+    var easeOutQuart = function(t) {
+      return 1 - Math.pow(1 - t, 4);
+    };
+
+    var renderValue = function(el, prefix, value) {
+      el.textContent = prefix + CO_NUMBER.format(Math.round(value));
+    };
+
+    var animateCounter = function(el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var prefix = el.getAttribute('data-prefix') || '';
+
+      if (isNaN(target)) {
+        return;
+      }
+
+      if (target === 0) {
+        renderValue(el, prefix, 0);
+        return;
+      }
+
+      var startTime = null;
+
+      var frame = function(timestamp) {
+        if (startTime === null) {
+          startTime = timestamp;
+        }
+
+        var progress = Math.min((timestamp - startTime) / COUNTER_DURATION, 1);
+        renderValue(el, prefix, target * easeOutQuart(progress));
+
+        if (progress < 1) {
+          window.requestAnimationFrame(frame);
+        } else {
+          renderValue(el, prefix, target);
+        }
+      };
+
+      renderValue(el, prefix, 0);
+      window.requestAnimationFrame(frame);
+    };
+
+    var startCounters = function() {
+      statNumbers.forEach(function(el, index) {
+        window.setTimeout(function() {
+          animateCounter(el);
+        }, index * COUNTER_STAGGER);
+      });
+    };
+
+    if ('IntersectionObserver' in window) {
+      var statsTrigger = document.querySelector('.stats__grid') || statNumbers[0];
+      var statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            startCounters();
+            statsObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.2 });
+
+      statsObserver.observe(statsTrigger);
+    }
+  }
+
   /* ===== FAQ accordion ===== */
   var faqItems = document.querySelectorAll('.faq__question');
   if (faqItems.length > 0) {

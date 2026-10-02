@@ -17,7 +17,7 @@
             <i data-lucide="<%= stat.icon %>"></i>
           </span>
           <p class="stats__value">
-            <span class="stats__number"><%= stat.value %></span><% if (stat.suffix) { %><span class="stats__suffix"><%= stat.suffix %></span><% } %>
+            <span class="stats__number" data-count="<%= stat.count %>" data-prefix="<%= stat.prefix || '' %>"><%= stat.value %></span><% if (stat.suffix) { %><span class="stats__suffix"><%= stat.suffix %></span><% } %>
           </p>
           <p class="stats__label"><%= stat.label %></p>
         </li>

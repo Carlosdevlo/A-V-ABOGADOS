@@ -79,9 +79,9 @@ const homeController = {
         { name: 'Zurich', logo: '/images/companies/Zurich.jpg' }
       ],
       stats: [
-        { value: '10', suffix: '', label: 'Años de experiencia', icon: 'award' },
-        { value: '1.032', suffix: '', label: 'Víctimas representadas', icon: 'users' },
-        { value: '$10.000', suffix: '+ millones', label: 'Indemnizaciones logradas', icon: 'trending-up' }
+        { value: '10', suffix: '', label: 'Años de experiencia', icon: 'award', count: 10 },
+        { value: '1.032', suffix: '', label: 'Víctimas representadas', icon: 'users', count: 1032 },
+        { value: '$10.000', suffix: '+ millones', label: 'Indemnizaciones logradas', icon: 'trending-up', count: 10000, prefix: '$' }
       ],
       location: {
         image: '/images/sections/sede_corporativa.jpg',
