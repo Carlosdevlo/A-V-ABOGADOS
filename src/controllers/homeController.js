@@ -45,7 +45,7 @@ const homeController = {
       ],
       fees: {
         title: 'Honorarios claros desde el primer día',
-        subtitle: 'Sin sorpresas ni cargos ocultos. Te explicamos todo con claridad.',
+        subtitle: 'Sin sorpresas ni cargos ocultos. Le explicamos todo con claridad.',
         items: [
           { title: 'Asesoría inicial sin costo', description: 'Evaluación de su caso y diagnóstico legal sin cargo alguno.' },
           { title: 'Honorarios sobre resultados', description: 'Solo generamos honorarios si logramos una indemnización favorable.' },
