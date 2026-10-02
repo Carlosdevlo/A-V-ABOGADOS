@@ -885,9 +885,5 @@
     transform: none;
   }
 
-  .companies__item:hover {
-    transform: none;
-  }
-
   scroll-behavior: auto;
 }

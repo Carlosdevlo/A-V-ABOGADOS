@@ -285,12 +285,6 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
-  .companies__ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
 }
 
 /* ===== Tablet: 768px - 1024px ===== */
@@ -378,13 +372,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-
-  .companies__ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-  }
 }
 
 /* ===== Medium desktop: 1025px - 1440px ===== */
@@ -434,13 +421,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
-
-  .companies__ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
-  }
 }
 
 /* ===== Large desktop: 1441px+ ===== */
@@ -486,13 +466,6 @@
   .footer__container {
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
-  }
-
-  .companies__ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.85rem;
   }
 }
 
@@ -566,10 +539,6 @@
   }
 
   .service-card:hover .service-card__img-wrap {
-    transform: none;
-  }
-
-  .companies__item:hover {
     transform: none;
   }
 

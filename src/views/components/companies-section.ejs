@@ -1,25 +1,27 @@
-<section class="companies section" id="aseguradoras">
+<section class="companies section" id="aseguradoras" aria-labelledby="companies-title">
   <div class="container">
     <div class="section__header" data-aos="fade-up">
       <div class="section__badge">
         <span class="section__badge-dot"></span>
         <span class="section__badge-text">Nuestra experiencia</span>
       </div>
-      <h2 class="section__title">Experiencia frente a compañías de seguros</h2>
+      <h2 class="section__title" id="companies-title">Experiencia que respalda nuestro trabajo</h2>
       <p class="section__subtitle">
-        Contamos con experiencia frente a diversas compañías de seguros en nuestras reclamaciones.
+        Hemos gestionado reclamaciones y negociado directamente con las principales compañías de seguros del país.
       </p>
     </div>
 
-    <div class="companies__list" data-aos="fade-up" data-aos-delay="100">
-      <ul class="companies__ul">
-        <% companies.forEach((company, index) => { %>
-          <li class="companies__item" data-aos="fade-up" data-aos-delay="<%= index * 50 %>">
-            <%= company.name %>
-          </li>
-        <% }) %>
-      </ul>
-      <p class="companies__note">Entre otras...</p>
-    </div>
+    <ul class="companies__grid" role="list">
+      <% companies.forEach(function(company, index) { %>
+        <li class="companies__card" data-aos="fade-up" data-aos-delay="<%= index * 40 %>">
+          <span class="companies__logo-wrap">
+            <img src="<%= company.logo %>" alt="<%= company.name %>" class="companies__logo" loading="lazy" decoding="async">
+          </span>
+          <span class="companies__name"><%= company.name %></span>
+        </li>
+      <% }) %>
+    </ul>
+
+    <p class="companies__note">Entre otras...</p>
   </div>
 </section>

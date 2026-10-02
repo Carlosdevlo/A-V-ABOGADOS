@@ -1,0 +1,50 @@
+<section class="sede section" id="sede" aria-labelledby="sede-title">
+  <div class="sede__watermark" aria-hidden="true">
+    <img src="/images/brand/fondo-logo.jpeg" alt="" class="sede__watermark-img" loading="lazy" width="761" height="458">
+  </div>
+
+  <div class="container">
+    <div class="sede__grid">
+      <div class="sede__media" data-aos="fade-right">
+        <img src="<%= location.image %>" alt="<%= location.imageAlt %>" class="sede__img" loading="lazy" width="1280" height="683">
+      </div>
+
+      <div class="sede__content" data-aos="fade-left">
+        <div class="section__badge">
+          <span class="section__badge-dot"></span>
+          <span class="section__badge-text"><%= location.eyebrow %></span>
+        </div>
+
+        <h2 class="section__title" id="sede-title"><%= location.title %></h2>
+        <p class="sede__brand">A&amp;V Abogados</p>
+
+        <address class="sede__address">
+          <i data-lucide="map-pin" class="sede__address-icon" aria-hidden="true"></i>
+          <span class="sede__address-text">
+            <% location.addressLines.forEach(function(line) { %>
+              <span class="sede__address-line"><%= line %></span>
+            <% }) %>
+          </span>
+        </address>
+
+        <div class="sede__actions">
+          <a href="<%= location.mapsUrl %>" class="btn btn--primary btn--lg sede__maps-btn" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="navigation" class="btn__icon" aria-hidden="true"></i>
+            Ver ubicación en Google Maps
+          </a>
+          <p class="sede__hint">Atendemos con cita previa en horario de oficina.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sede__map" data-aos="fade-up">
+      <iframe
+        class="sede__map-frame"
+        src="<%= location.mapsEmbedUrl %>"
+        title="Mapa de la sede de A&amp;V Abogados en el Edificio Elemento, Bogotá"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

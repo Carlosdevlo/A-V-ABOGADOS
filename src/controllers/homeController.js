@@ -45,7 +45,7 @@ const homeController = {
       ],
       fees: {
         title: 'Honorarios claros desde el primer día',
-        subtitle: 'Sin sorpresas ni cargos ocultos. Suáble nos explicamos.',
+        subtitle: 'Sin sorpresas ni cargos ocultos. Te explicamos todo con claridad.',
         items: [
           { title: 'Asesoría inicial sin costo', description: 'Evaluación de su caso y diagnóstico legal sin cargo alguno.' },
           { title: 'Honorarios sobre resultados', description: 'Solo generamos honorarios si logramos una indemnización favorable.' },
@@ -67,17 +67,35 @@ const homeController = {
         ]
       },
       companies: [
-        { name: 'Seguros Bolívar' },
-        { name: 'Allianz' },
-        { name: 'AXA Colpatria' },
-        { name: 'Suramericana' },
-        { name: 'HDI Seguros' },
-        { name: 'SBS' },
-        { name: 'MAPFRE' },
-        { name: 'Mundial' },
-        { name: 'La Equidad' },
-        { name: 'Zurich' }
+        { name: 'Seguros Bolívar', logo: '/images/companies/Seguros Bolivar.png' },
+        { name: 'Allianz', logo: '/images/companies/Allianz.png' },
+        { name: 'AXA Colpatria', logo: '/images/companies/AXA%20Colpatria.png' },
+        { name: 'Suramericana', logo: '/images/companies/Suramericana.png' },
+        { name: 'HDI Seguros', logo: '/images/companies/HDI%20Seguros.jpg' },
+        { name: 'SBS', logo: '/images/companies/SBS.jpg' },
+        { name: 'MAPFRE', logo: '/images/companies/MAPFRE.png' },
+        { name: 'Mundial', logo: '/images/companies/Seguros%20Mundial.png' },
+        { name: 'La Equidad', logo: '/images/companies/La%20Equidad.jpg' },
+        { name: 'Zurich', logo: '/images/companies/Zurich.jpg' }
       ],
+      stats: [
+        { value: '7', suffix: '', label: 'Años de experiencia', icon: 'award' },
+        { value: '256', suffix: '', label: 'Víctimas representadas', icon: 'users' },
+        { value: '$6.00', suffix: ' Millones', label: 'Indemnizaciones logradas', icon: 'trending-up' }
+      ],
+      location: {
+        image: '/images/sections/sede_corporativa.jpg',
+        imageAlt: 'Sede corporativa de A&V Abogados en el Edificio Elemento, Bogotá',
+        eyebrow: 'Nuestra sede',
+        title: 'Visítanos en nuestra sede corporativa',
+        addressLines: [
+          'Av Calle 26 # 69 – 76',
+          'Edificio Elemento, Torre 3 Tierra',
+          'Oficina 1501, Bogotá'
+        ],
+        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Av Calle 26 # 69 – 76, Edificio Elemento, Torre 3 Tierra, Oficina 1501, Bogotá'),
+        mapsEmbedUrl: 'https://www.google.com/maps?q=' + encodeURIComponent('Av Calle 26 # 69 – 76, Edificio Elemento, Torre 3 Tierra, Oficina 1501, Bogotá') + '&z=17&hl=es&output=embed'
+      },
       acompanaBenefits: [
         {
           number: '01',
