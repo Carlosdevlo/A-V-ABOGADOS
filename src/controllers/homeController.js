@@ -38,7 +38,7 @@ const homeController = {
         { question: '¿La asesoría tiene costo?', answer: 'No. La asesoría inicial es completamente sin costo. No paga nada hasta que se logre una indemnización.' },
         { question: '¿Cuándo cobran honorarios?', answer: 'Solo generamos honorarios si ganamos el caso. Trabajamos sobre resultados.' },
         { question: '¿Qué porcentaje cobran?', answer: 'Cobramos un 30% sobre el monto total de la indemnización que se logre.' },
-        { question: '¿Me pueden representar ante una aseguradora?', answer: 'Sí. Exigimos una justa indemnización frente a la compañía de seguros por perjuicios morales, daños materiales y lucro cesante.' },
+        { question: '¿Me pueden representar ante una aseguradora?', answer: 'Sí. Exigimos una justa indemnización frente a la compañía de seguros por perjuicios patrimoniales y extrapatrimoniales (daño emergente, lucro cesante, daños morales y daño a la vida de relación).' },
         { question: '¿También me acompañan ante Fiscalía?', answer: 'Sí. Asistimos sin costo alguno frente al proceso penal en la Fiscalía.' },
         { question: '¿Pueden evaluar pérdida de capacidad laboral?', answer: 'Sí. Evaluamos su posible pérdida de capacidad laboral (PCL) y gestionamos el reconocimiento correspondiente.' },
         { question: '¿Atienden víctimas fuera de Bogotá?', answer: 'Sí. Hemos representado a víctimas de accidentes de tránsito a nivel nacional.' }
