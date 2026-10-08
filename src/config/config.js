@@ -13,7 +13,8 @@ const config = {
     whatsappNumber: process.env.WHATSAPP_NUMBER || '573008811886',
     whatsappMessage: process.env.WHATSAPP_MESSAGE || 'Hola A&V Abogados, quisiera recibir orientación sobre un accidente de tránsito.',
     phone: process.env.PHONE || '(+57) 484 9186',
-    email: process.env.EMAIL || 'contacto@abogadosav.com',
+    email: process.env.EMAIL || 'consultas@abogadosav.com',
+    juridicEmail: process.env.JURIDIC_EMAIL || 'juridico@abogadosav.com',
     address: process.env.ADDRESS || 'Av Calle 26 # 69 – 76, Edificio Elemento, Torre 3 Tierra, Oficina 1501'
   },
   rateLimit: {
