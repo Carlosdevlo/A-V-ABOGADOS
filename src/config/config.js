@@ -17,6 +17,15 @@ const config = {
     juridicEmail: process.env.JURIDIC_EMAIL || 'juridico@abogadosav.com',
     address: process.env.ADDRESS || 'Av Calle 26 # 69 – 76, Edificio Elemento, Torre 3 Tierra, Oficina 1501'
   },
+  mail: {
+    smtpHost: process.env.SMTP_HOST || '',
+    smtpPort: parseInt(process.env.SMTP_PORT, 10) || 587,
+    smtpSecure: process.env.SMTP_SECURE === 'true',
+    smtpUser: process.env.SMTP_USER || '',
+    smtpPass: process.env.SMTP_PASS || '',
+    from: process.env.MAIL_FROM || 'consultas@abogadosav.com',
+    to: process.env.MAIL_TO || process.env.EMAIL || 'consultas@abogadosav.com'
+  },
   rateLimit: {
     windowMs: 15 * 60 * 1000,
     max: parseInt(process.env.RATE_LIMIT_MAX, 10) || 100
