@@ -103,6 +103,19 @@
           <span class="form__error" id="modal-healthAuth-error"></span>
         </div>
 
+        <!-- Honeypot field - invisible to humans, traps bots -->
+        <div class="form__group form__group--honeypot" aria-hidden="true" style="position: absolute; left: -9999px; opacity: 0; pointer-events: none; height: 0; overflow: hidden;">
+          <label for="modal-website" class="form__label">Sitio web</label>
+          <input type="text" id="modal-website" name="website" class="form__input" tabindex="-1" autocomplete="off" value="">
+        </div>
+
+        <!-- Cloudflare Turnstile (invisible mode) -->
+        <% if (typeof turnstileSiteKey !== 'undefined' && turnstileSiteKey) { %>
+        <div class="form__group form__group--turnstile" data-turnstile>
+          <input type="hidden" name="cf-turnstile-response" id="cf-turnstile-response">
+        </div>
+        <% } %>
+
         <button type="submit" class="btn btn--primary btn--lg btn--full" id="modal-submit-btn">
           <span id="modal-submit-text">Enviar mi caso</span>
           <i data-lucide="send" class="btn__icon" aria-hidden="true"></i>

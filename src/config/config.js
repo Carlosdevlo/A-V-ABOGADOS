@@ -26,9 +26,18 @@ const config = {
     from: process.env.MAIL_FROM || 'consultas@abogadosav.com',
     to: process.env.MAIL_TO || process.env.EMAIL || 'consultas@abogadosav.com'
   },
+  turnstile: {
+    siteKey: process.env.TURNSTILE_SITE_KEY || '',
+    secretKey: process.env.TURNSTILE_SECRET_KEY || '',
+    enabled: process.env.TURNSTILE_ENABLED === 'true'
+  },
   rateLimit: {
     windowMs: 15 * 60 * 1000,
     max: parseInt(process.env.RATE_LIMIT_MAX, 10) || 100
+  },
+  contactRateLimit: {
+    windowMs: 60 * 60 * 1000,
+    max: parseInt(process.env.CONTACT_RATE_LIMIT_MAX, 10) || 5
   }
 };
 

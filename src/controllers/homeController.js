@@ -1,3 +1,4 @@
+const config = require('../config/config');
 const WhatsappService = require('../services/whatsappService');
 
 const homeController = {
@@ -180,6 +181,7 @@ const homeController = {
       description: 'Abogados especializados en accidentes de tránsito, seguros y responsabilidad civil en Colombia. Defendemos sus derechos y buscamos una indemnización justa. Asesoría sin costo.',
       page: 'home',
       whatsappLink,
+      turnstileSiteKey: config.turnstile.siteKey,
       ...homeController._buildHomeData()
     });
   }

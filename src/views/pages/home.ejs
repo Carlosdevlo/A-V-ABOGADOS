@@ -41,6 +41,10 @@
 
   <script defer src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
 
+  <% if (typeof turnstileSiteKey !== 'undefined' && turnstileSiteKey) { %>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <% } %>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -82,7 +86,7 @@
     <%- include('components/contact-section') %>
   </main>
 
-  <%- include('components/contact-modal') %>
+  <%- include('components/contact-modal', { turnstileSiteKey: turnstileSiteKey }) %>
 
   <%- include('partials/footer') %>
 
